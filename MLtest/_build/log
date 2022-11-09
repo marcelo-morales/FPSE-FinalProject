@@ -1,9 +1,10 @@
 # dune exec ./example.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /home/rawstone/testTorch/Tester
+# Workspace root:
+# /mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest
 # Auto-detected concurrency: 8
-$ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_5b678b_output
+$ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_78eaff_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -23,14 +24,16 @@ $ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_5b678b_output
 #      map
 #        { "DUNE_OCAML_HARDCODED" : "/home/rawstone/.opam/4.14.0/lib"
 #        ; "DUNE_OCAML_STDLIB" : "/home/rawstone/.opam/4.14.0/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/home/rawstone/testTorch/Tester"
-#        ; "INSIDE_DUNE" : "/home/rawstone/testTorch/Tester/_build/default"
+#        ; "DUNE_SOURCEROOT" :
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest"
+#        ; "INSIDE_DUNE" :
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/home/rawstone/testTorch/Tester/_build/install/default/lib"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/home/rawstone/testTorch/Tester/_build/install/default/lib"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/home/rawstone/testTorch/Tester/_build/install/default/lib/toplevel"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
@@ -110,5 +113,6 @@ $ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_5b678b_output
 #      ; windows_unicode = false
 #      }
 #  }
+$ (cd _build/default && /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I .example.eobjs/byte -I /home/rawstone/.opam/4.14.0/lib/base -I /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types -I /home/rawstone/.opam/4.14.0/lib/base/caml -I /home/rawstone/.opam/4.14.0/lib/base/shadow_stdlib -I /home/rawstone/.opam/4.14.0/lib/bigarray-compat -I /home/rawstone/.opam/4.14.0/lib/ctypes -I /home/rawstone/.opam/4.14.0/lib/integers -I /home/rawstone/.opam/4.14.0/lib/ocaml/threads -I /home/rawstone/.opam/4.14.0/lib/sexplib0 -I /home/rawstone/.opam/4.14.0/lib/stdio -I /home/rawstone/.opam/4.14.0/lib/stdlib-shims -I /home/rawstone/.opam/4.14.0/lib/torch -I /home/rawstone/.opam/4.14.0/lib/torch/core -no-alias-deps -opaque -o .example.eobjs/byte/dune__exe__Example.cmi -c -intf example.mli)
 $ (cd _build/default && /home/rawstone/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I .example.eobjs/byte -I .example.eobjs/native -I /home/rawstone/.opam/4.14.0/lib/base -I /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types -I /home/rawstone/.opam/4.14.0/lib/base/caml -I /home/rawstone/.opam/4.14.0/lib/base/shadow_stdlib -I /home/rawstone/.opam/4.14.0/lib/bigarray-compat -I /home/rawstone/.opam/4.14.0/lib/ctypes -I /home/rawstone/.opam/4.14.0/lib/integers -I /home/rawstone/.opam/4.14.0/lib/ocaml/threads -I /home/rawstone/.opam/4.14.0/lib/sexplib0 -I /home/rawstone/.opam/4.14.0/lib/stdio -I /home/rawstone/.opam/4.14.0/lib/stdlib-shims -I /home/rawstone/.opam/4.14.0/lib/torch -I /home/rawstone/.opam/4.14.0/lib/torch/core -intf-suffix .ml -no-alias-deps -opaque -o .example.eobjs/native/dune__exe__Example.cmx -c -impl example.ml)
 $ (cd _build/default && /home/rawstone/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o example.exe /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types /home/rawstone/.opam/4.14.0/lib/base/caml/caml.cmxa /home/rawstone/.opam/4.14.0/lib/sexplib0/sexplib0.cmxa /home/rawstone/.opam/4.14.0/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/rawstone/.opam/4.14.0/lib/base/base.cmxa -I /home/rawstone/.opam/4.14.0/lib/base /home/rawstone/.opam/4.14.0/lib/stdio/stdio.cmxa /home/rawstone/.opam/4.14.0/lib/ocaml/unix.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/ocaml/bigarray.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/ocaml/threads/threads.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/bigarray-compat/bigarray_compat.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/stdlib-shims/stdlib_shims.cmxa /home/rawstone/.opam/4.14.0/lib/integers/integers.cmxa -I /home/rawstone/.opam/4.14.0/lib/integers /home/rawstone/.opam/4.14.0/lib/ctypes/ctypes.cmxa -I /home/rawstone/.opam/4.14.0/lib/ctypes /home/rawstone/.opam/4.14.0/lib/ctypes/ctypes-foreign.cmxa -I /home/rawstone/.opam/4.14.0/lib/ctypes /home/rawstone/.opam/4.14.0/lib/ocaml/str.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/ctypes/cstubs.cmxa -I /home/rawstone/.opam/4.14.0/lib/ctypes /home/rawstone/.opam/4.14.0/lib/torch/core/torch_core.cmxa -I /home/rawstone/.opam/4.14.0/lib/torch/core /home/rawstone/.opam/4.14.0/lib/torch/torch.cmxa .example.eobjs/native/dune__exe__Example.cmx)
