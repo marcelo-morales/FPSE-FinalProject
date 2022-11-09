@@ -1,18 +1,21 @@
 
 (library
- (name simple_set)
- (modules simple_set) 
- (libraries core)
-)
+ (name lib)
+ (modules lib)
+ (libraries
+  core
+  torch
+  cohttp-lwt-unix
+  csv
+  yojson
+  ppx_deriving_yojson.runtime
+  )
+ (preprocess
+  (pps ppx_deriving_yojson bisect_ppx)))
 
-; To load libraries in a fresh utop top loop use command line
-; `dune utop`
-; or an equivalent means is to start utop and enter `#use_output "dune top";;`
-
-; The below builds a main program executable
 (executable
-  (name set_main)
-  (libraries simple_set core)
-  (modules set_main)
-)
-; to run executable type dune exec ./src/set_main.exe <search_string> <filename>
+ (name app)
+ (modules app)
+ (libraries core lib dream)
+ (preprocess
+  (pps lwt_ppx ppx_deriving_yojson)))
