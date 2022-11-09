@@ -1,10 +1,11 @@
 
 (library
- (name lib)
- (modules lib)
+ (name strter)
+ (modules strter)
  (libraries
   core
   torch
+  Torch_core
   cohttp-lwt-unix
   csv
   yojson
