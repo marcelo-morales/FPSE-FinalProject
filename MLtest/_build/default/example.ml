@@ -8,12 +8,50 @@
 
    This should reach ~92% accuracy on the test dataset.
 *)
+
+
 open Base
 open Torch
+(* open Npy *)
 
-let learning_rate = Tensor.f 1.
+let npz_tensors ~filename ~f =
+  let npz_file = Npy.Npz.open_in filename in
+  let named_tensors =
+    Npy.Npz.entries npz_file
+    |> List.map ~f:(fun tensor_name -> f tensor_name (Npy.Npz.read npz_file tensor_name))
+  in
+  Npy.Npz.close_in npz_file;
+  named_tensors;;
 
-let () =
+
+
+let ls files =
+  List.iter files ~f:(fun filename ->
+      Stdio.printf "%s:\n" filename;
+      let tensor_names_and_shapes =
+        if String.is_suffix filename ~suffix:".npz"
+        then
+          npz_tensors ~filename ~f:(fun tensor_name packed_tensor ->
+              match packed_tensor with
+              | Npy.P tensor ->
+                let tensor_shape = Bigarray.Genarray.dims tensor |> Array.to_list in
+                tensor_name, tensor_shape)
+        else
+          Serialize.load_all ~filename
+          |> List.map ~f:(fun (tensor_name, tensor) -> tensor_name, Tensor.shape tensor)
+      in
+      List.iter tensor_names_and_shapes ~f:(fun (tensor_name, shape) ->
+          let shape = List.map shape ~f:Int.to_string |> String.concat ~sep:", " in
+          Stdio.printf "  %s (%s)\n" tensor_name shape))
+
+
+
+          
+let () = ls ["/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest/handwrittenImage.npz"];;
+    
+
+(* let learning_rate = Tensor.f 1. *)
+(* let () =
   let { Dataset_helper.train_images; train_labels; test_images; test_labels } =
     Mnist_helper.read_files ()
   in
@@ -43,5 +81,9 @@ let () =
     in
     Stdio.printf "%d %f %.2f%%\n%!" index (Tensor.float_value loss) (100. *. test_accuracy);
     Caml.Gc.full_major ()
-  done
+  
+  
 
+
+  done
+ *)

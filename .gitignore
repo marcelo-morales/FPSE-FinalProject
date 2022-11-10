@@ -2,3 +2,5 @@
 .vscode/*
 .idea/*
 . MLtest/_build/*
+
+ocaml-torch
