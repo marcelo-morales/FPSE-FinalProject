@@ -1,8 +1,6 @@
 open Torch
 
 
-
-
 val strings_from_file: string -> string
 val sanitize:  string -> string option
 val remove_first_character: string -> string
