@@ -2,6 +2,7 @@
 [@@@ocaml.warning "-33"]
 [@@@ocaml.warning "-32"]
 [@@@ocaml.warning "-27"]
+[@@@ocaml.warning "-26"]
 
 open Core
 open Torch
@@ -41,38 +42,25 @@ let apply_remove_first ls =
 let make_biglist ls =
   List.fold ls ~init:[] ~f:(fun accum x -> accum @ [(String.split_on_chars x ~on:[' '])] )
 
-let get_value ls a b  =
-  List.nth_exn (List.nth_exn ls a) b;;
 
-
-let hey = Array.make_matrix ~dimx:28 ~dimy:28 0.0;;
-
-
-let populate_array theArray strlist =
-  for i=0 to 27 do
-    for j=0 to 27 do
-      theArray.(i).(j) <- Float.of_string (get_value strlist j i)
-    done
-  done;;
-
-let print_array theArray =
-  for i=0 to 27 do
-    print_endline "";
-    for j=0 to 27 do
-      (* printf "%s" (string_of_float theArray.(i).(j)); *)
-      printf "%s" (sprintf "%.0f " theArray.(j).(i))
-    done
-  done;;
 
 
 
 let () =
   (* let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n'] |> sanitize_list in *)
 
-  let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist in
-  populate_array hey mylist;
-  let _t1 = Tensor.of_float2 hey in
-  print_array hey;
+  let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat in
+  
+  let mylist2 = List.map mylist ~f:(fun x -> float_of_string x)  in
+  print_endline "";
+  printf "%i" (List.length mylist2);
+  List.iter ~f:(printf "%f ") (mylist2);
+  let t2 =  Array.of_list mylist2 |> Tensor.of_float1 in
+  print_endline ""
+
+
+
+  
 
   
 

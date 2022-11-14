@@ -9,5 +9,5 @@
 
 
 (executables
-  (names example readfile)
+  (names example readfile testWithoutCore)
   (libraries core torch npy core_unix core_unix.sys_unix))

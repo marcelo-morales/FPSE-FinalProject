@@ -4,3 +4,7 @@ module Example = Dune__exe__Example
 
 (** @canonical Dune__exe.Readfile *)
 module Readfile = Dune__exe__Readfile
+
+
+(** @canonical Dune__exe.TestWithoutCore *)
+module TestWithoutCore = Dune__exe__TestWithoutCore
