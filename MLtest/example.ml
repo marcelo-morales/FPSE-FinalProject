@@ -1,57 +1,93 @@
-(* Linear model for the MNIST dataset.
-   The 4 following dataset files can be downloaded from http://yann.lecun.com/exdb/mnist/
-   These files should be extracted in the 'data' directory.
-     train-images-idx3-ubyte.gz
-     train-labels-idx1-ubyte.gz
-     t10k-images-idx3-ubyte.gz
-     t10k-labels-idx1-ubyte.gz
+[@@@ocaml.warning "-33"]
+[@@@ocaml.warning "-32"]
+[@@@ocaml.warning "-27"]
 
-   This should reach ~92% accuracy on the test dataset.
-*)
-
-
-open Base
+open Core
 open Torch
-(* open Npy *)
-
-let npz_tensors ~filename ~f =
-  let npz_file = Npy.Npz.open_in filename in
-  let named_tensors =
-    Npy.Npz.entries npz_file
-    |> List.map ~f:(fun tensor_name -> f tensor_name (Npy.Npz.read npz_file tensor_name))
-  in
-  Npy.Npz.close_in npz_file;
-  named_tensors;;
 
 
 
-let ls files =
-  List.iter files ~f:(fun filename ->
-      Stdio.printf "%s:\n" filename;
-      let tensor_names_and_shapes =
-        if String.is_suffix filename ~suffix:".npz"
-        then
-          npz_tensors ~filename ~f:(fun tensor_name packed_tensor ->
-              match packed_tensor with
-              | Npy.P tensor ->
-                let tensor_shape = Bigarray.Genarray.dims tensor |> Array.to_list in
-                tensor_name, tensor_shape)
-        else
-          Serialize.load_all ~filename
-          |> List.map ~f:(fun (tensor_name, tensor) -> tensor_name, Tensor.shape tensor)
+
+let strings_from_file filename = 
+  let strings = In_channel.read_all filename in  (* Cannot test files *)
+  strings;;
+
+(* let sanitize (s : string) : string =
+  Str.global_replace (Str.regexp "[^a-zA-Z0-9.]+") " " s |> String.lowercase;; *)
+
+let sanitize (s : string) : string option =
+  match String.length s with
+  | 0 -> None
+  | _ -> (
+      let new_string =
+        Str.global_replace (Str.regexp "[^a-zA-Z0-9.]+") " " s |> String.lowercase
       in
-      List.iter tensor_names_and_shapes ~f:(fun (tensor_name, shape) ->
-          let shape = List.map shape ~f:Int.to_string |> String.concat ~sep:", " in
-          Stdio.printf "  %s (%s)\n" tensor_name shape))
+      match String.length new_string with 0 -> None | _ -> Some new_string)
+
+
+let sanitize_list stringlist =
+  List.fold stringlist ~init:[] ~f:(fun accum x ->
+      match sanitize x with
+      | None -> accum
+      | Some sanitized -> accum @ [ sanitized ]);;
+
+let remove_first_character str =
+  String.slice str 1 (String.length str);;
+
+let apply_remove_first ls =
+  List.map ls ~f:(fun x -> remove_first_character x)
+
+let make_biglist ls =
+  List.fold ls ~init:[] ~f:(fun accum x -> accum @ [(String.split_on_chars x ~on:[' '])] )
+
+let get_value ls a b  =
+  List.nth_exn (List.nth_exn ls a) b;;
+
+
+let hey = Array.make_matrix ~dimx:28 ~dimy:28 0.0;;
+
+
+let populate_array theArray strlist =
+  for i=0 to 27 do
+    for j=0 to 27 do
+      theArray.(i).(j) <- Float.of_string (get_value strlist j i)
+    done
+  done;;
+
+let print_array theArray =
+  for i=0 to 27 do
+    print_endline "";
+    for j=0 to 27 do
+      (* printf "%s" (string_of_float theArray.(i).(j)); *)
+      printf "%s" (sprintf "%.0f " theArray.(j).(i))
+    done
+  done;;
 
 
 
-          
-let () = ls ["/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/MLtest/handwrittenImage.npz"];;
-    
+let () =
+  (* let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n'] |> sanitize_list in *)
 
-(* let learning_rate = Tensor.f 1. *)
-(* let () =
+  let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist in
+  populate_array hey mylist;
+  
+  print_array hey;;
+
+  
+
+let t1 = Tensor.of_float2 hey 
+(* |> List.iter ~f:(printf "%s ") ; *)
+
+
+
+
+  
+
+
+
+let learning_rate = Tensor.f 1. 
+
+let () =
   let { Dataset_helper.train_images; train_labels; test_images; test_labels } =
     Mnist_helper.read_files ()
   in
@@ -80,10 +116,18 @@ let () = ls ["/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semes
       |> fun sum -> sum /. Float.of_int (Tensor.shape test_images |> List.hd_exn)
     in
     Stdio.printf "%d %f %.2f%%\n%!" index (Tensor.float_value loss) (100. *. test_accuracy);
+    
+    let test_accuracy_on_image =
+      Tensor.(argmax ~dim:(-1) (model t1) )
+      (* |> Tensor.to_kind ~kind:(T Float)
+      |> Tensor.float_value *)
+    in
+    let () = List.iter ~f:(printf "%s ")
+
     Caml.Gc.full_major ()
   
   
 
 
   done
- *)
+

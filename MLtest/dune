@@ -1,3 +1,13 @@
+
+; (library
+;   (name readfile)
+;   (modules readfile)
+;   (libraries 
+;   torch npy core_unix core_unix.sys_unix
+;     )
+    ; )
+
+
 (executables
-  (names example test2)
-  (libraries torch npy core_unix core_unix.sys_unix))
+  (names example readfile)
+  (libraries core torch npy core_unix core_unix.sys_unix))
