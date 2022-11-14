@@ -1,13 +1,20 @@
-open Torch_core
+open Torch
 
-type 'a t (* hide the type 'a list here by not giving it in signature *)
-val emptyset : 'a t
-val add: 'a -> 'a t ->'a t
-val remove : 'a -> 'a t ->  ('a -> 'a -> bool) -> 'a t
-val contains: 'a -> 'a t ->  ('a -> 'a -> bool) -> bool    
 
-val predictImage: Torch_core.Wrapper.Tensor.t -> int
 
+
+val strings_from_file: string -> string
+val sanitize:  string -> string option
+val remove_first_character: string -> string
+val apply_remove_first: string list -> string list
+val make_biglist: string list -> string list list
+
+
+val read_image_from_file: string -> Tensor.t
+val predictImage: Tensor.t -> int
+
+val save_model: Tensor.t -> unit
+val load_model: unit
 
 
 
