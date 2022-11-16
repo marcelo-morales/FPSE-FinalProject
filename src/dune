@@ -1,7 +1,5 @@
-
 (library
  (name strter)
- (modules strter)
  (libraries
   core
   torch
@@ -16,7 +14,6 @@
 
 (executable
  (name app)
- (modules app)
  (libraries core lib dream)
  (preprocess
   (pps lwt_ppx ppx_deriving_yojson)))

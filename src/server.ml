@@ -3,10 +3,10 @@
     Dream.html "Good morning, world!") *)
 
 (* Middleware *)
-let () =
+(* let () =
   Dream.run
     (Dream.logger (fun _ ->
-      Dream.html "Good morning, world!"))
+      Dream.html "Good morning, world!")) *)
 
 (* Actual code... *)
 let () =
@@ -16,7 +16,7 @@ let () =
 
 
 (* routing *)
-let () =
+(* let () =
   Dream.run
   @@ Dream.logger
   @@ Dream.router [
@@ -29,7 +29,6 @@ let () =
       (fun request ->
         Dream.html (Dream.param request "word"));
 
-  ]
+  ] *)
 
-  (* handling HTTP errors *)
   
