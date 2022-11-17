@@ -25,7 +25,7 @@ sequenceDiagram
     end
     Note right of John: Rational thoughts <br/>prevail!
     John-->>Alice: Great!
-    John->>Bob: How about you?
+    John->>Bob: How about you?m
     Bob-->>John: Jolly good!
 
 ```mermaid
@@ -37,7 +37,7 @@ erDiagram
         INVOICE ||--|{ ORDER : covers
         ORDER ||--|{ ORDER-ITEM : includes
         PRODUCT-CATEGORY ||--|{ PRODUCT : contains
-        PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+        PRODUCT ||--o{ ORDER-ITEM : "ordered in"ii
                     
 sequenceDiagram
     participant Alice
