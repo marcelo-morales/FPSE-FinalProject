@@ -1,5 +1,5 @@
 (library
- (name strter)
+ (name learning)
  (libraries
   core
   torch
