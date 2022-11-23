@@ -12,15 +12,15 @@ import matplotlib.pyplot as plt
 
 
 # np.savetxt("handwrittenImage.txt",train_X[0])
-print(type(train_X[0]))
-print(train_X[0].dtype)
-print(train_X[0].dtype.byteorder)
+print(type(test_X[0]))
+print(test_X[0].dtype)
+print(test_X[0].dtype.byteorder)
     # pyplot.subplot(330 + 1 + i)
     # pyplot.imshow(train_X[i], cmap=pyplot.get_cmap('gray'))
     # pyplot.show()
     
 
-selectedImage=train_X[0].astype(float)
+selectedImage=test_X[1].astype(float)
 print(selectedImage.dtype)
 print(selectedImage.dtype.byteorder)
 
@@ -35,3 +35,5 @@ np.save("handwrittenImage",selectedImage)
 print(selectedImage)
 plt.imshow(selectedImage)
 plt.savefig("selectedImageshow")
+
+

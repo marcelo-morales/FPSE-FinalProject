@@ -46,8 +46,7 @@ let make_biglist ls =
 
 
 
-let () =
-  (* let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n'] |> sanitize_list in *)
+(* let () =
 
   let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat in
   
@@ -56,7 +55,7 @@ let () =
   printf "%i" (List.length mylist2);
   List.iter ~f:(printf "%f ") (mylist2);
   let t2 =  Array.of_list mylist2 |> Tensor.of_float1 in
-  print_endline ""
+  print_endline "" *)
 
 
 

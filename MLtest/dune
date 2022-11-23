@@ -1,13 +1,28 @@
 
-; (library
-;   (name readfile)
-;   (modules readfile)
-;   (libraries 
-;   torch npy core_unix core_unix.sys_unix
-;     )
-    ; )
+(library
+  (name readfile)
+  (modules readfile)
+  (libraries 
+  torch npy core_unix core_unix.sys_unix))
 
 
-(executables
-  (names example readfile testWithoutCore)
-  (libraries core torch npy core_unix core_unix.sys_unix))
+(executable
+  (name testWithoutCore)
+  (modules testWithoutCore)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+
+(executable
+  (name predict_using_linear)
+  (modules predict_using_linear)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+
+(executable
+  (name  predict_using_nn)
+  (modules predict_using_nn)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+
+(executable
+  (name predict_only)
+  (modules predict_only)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+
