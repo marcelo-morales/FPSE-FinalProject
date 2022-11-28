@@ -6,11 +6,14 @@
 open Torch
 open Base
 open Sexplib.Conv
+open Readfile
+open Core
 
-let t = Tensor.of_int2 [| [| 3; 1; 4 |]; [| 1; 5; 9 |] |]
+let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat ;;
 
-(* let () = Tensor.to_list t |> List.iter ~f:(fun t -> Tensor.to_int1_exn t |> Stdio.printf !"%{sexp:int array}\n"); *)
+let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;; 
+
+let t2 =  Array.of_list mylist2 |> Tensor.of_float1 ;;
 
 
 
-(* Array.to_list (Tensor.(to_float1_exn t));; *)

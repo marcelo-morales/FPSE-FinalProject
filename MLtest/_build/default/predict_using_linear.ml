@@ -19,9 +19,9 @@ let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;;
 
 let t2 =  Array.of_list mylist2 |> Tensor.of_float1 ;;
 
-let () = Tensor.shape t2 |> List.iter ~f:(printf "%i ")
+(* let () = Tensor.shape t2 |> List.iter ~f:(printf "%i ")
 
-let () = print_endline ""
+let () = print_endline "" *)
 
 (* |> List.iter ~f:(printf "%s ") ; *)
 

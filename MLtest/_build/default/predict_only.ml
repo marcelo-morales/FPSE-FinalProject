@@ -15,16 +15,6 @@ let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;;
 
 let t2 =  Array.of_list mylist2 |> Tensor.of_float1 ;;
 
-(* let () = Tensor.shape t2 |> List.iter ~f:(printf "%i ") *)
-
-
-(* |> List.iter ~f:(printf "%s ") ; *)
-
-
-
-
-
-
 let hidden_nodes = 128
 let epochs = 50
 let learning_rate = 1e-3
