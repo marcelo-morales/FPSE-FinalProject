@@ -32,7 +32,7 @@ Documentation for your users will navgiate the Numerade web app.
 
 ## Design
 
-Corresponding design and user interface wireframe sketching can be found in [this Figma](https://www.figma.com/file/X1w7aaslzVlGoMeHAPfq6M/FPSE-Final-Project?node-id=0%3A1).
+Corresponding design and user interface wireframe sketching can be found in [this Notability page](https://notability.com/n/1Myv85vkl5ntlpK~nA1500).
 
 
 ## API Reference
