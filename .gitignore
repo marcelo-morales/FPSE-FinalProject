@@ -3,8 +3,18 @@
 .idea/*
 . MLtest/_build/*
 
+
 ocaml-torch
 *.cmt
 MLtest/_build/default/.example.eobjs/byte/dune__exe.cmt
 MLtest/_build/default/.example.eobjs/native/dune__exe.o
 *.o
+
+MLtest\_build
+MLtest\_build\
+
+MLtest/_build
+MLtest/_build
+MLtest/_build/
+
+*.cmi
