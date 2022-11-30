@@ -25,6 +25,16 @@ dune exec ./example.exe
 ```
 
 
+To run the Dream Server as a localhost in your computer run:
+
+```
+dune build
+dune exec ./server.exe
+```
+
+and then go to http://localhost:8080/ to visit the local changes made to the site.
+
+
 ## User Manual
 
 Documentation for your users will navgiate the Numerade web app. 
