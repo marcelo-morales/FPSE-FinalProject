@@ -7,22 +7,26 @@
 
 
 (executable
-  (name testWithoutCore)
-  (modules testWithoutCore)
+  (name  predict_nn)
+  (modules predict_nn)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
 (executable
-  (name predict_using_linear)
-  (modules predict_using_linear)
+  (name train_nn)
+  (modules train_nn)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
 (executable
-  (name  predict_using_nn)
-  (modules predict_using_nn)
+  (name train_conv)
+  (modules train_conv)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
 (executable
-  (name predict_only)
-  (modules predict_only)
+  (name predict_conv)
+  (modules predict_conv)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
+(executable
+  (name padtesting)
+  (modules padtesting)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
