@@ -8,14 +8,13 @@ open Torch
 open Readfile
 
 
-
 let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat ;;
 
 let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;; 
 
 let t2 =  Array.of_list mylist2 |> Tensor.of_float1 ;;
 
-let hidden_nodes = 128
+let hidden_nodes = 1284dd
 let epochs = 50
 let learning_rate = 1e-3
 
