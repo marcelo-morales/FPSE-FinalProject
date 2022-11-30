@@ -1,0 +1,29 @@
+name: NPM
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Package and test with a minimal app
+
+    strategy:
+      matrix:
+        system: [ubuntu, macos, windows]
+
+    runs-on: ${{ matrix.system }}-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install esy
+        run: npm install -g esy
+
+      - run: sh ./.ci/scripts/run.sh
+        shell: bash
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: release
+          path: package.tgz
