@@ -1,19 +1,5 @@
-(library
- (name learning)
- (libraries
-  core
-  torch
-  Torch_core
-  cohttp-lwt-unix
-  csv
-  yojson
-  ppx_deriving_yojson.runtime
-  )
- (preprocess
-  (pps ppx_deriving_yojson bisect_ppx)))
-
 (executable
- (name app)
- (libraries core lib dream)
- (preprocess
-  (pps lwt_ppx ppx_deriving_yojson)))
+ (name hello)
+ (libraries dream))
+
+(data_only_dirs _esy esy.lock lib node_modules)

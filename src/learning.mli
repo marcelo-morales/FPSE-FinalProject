@@ -2,6 +2,8 @@
 
 open Torch
 
+(* can add comments to function *)
+
 
 val strings_from_file: string -> string
 val sanitize:  string -> string option
