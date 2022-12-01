@@ -1,0 +1,21 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o server-App.cmi : cp ../bs/src/backend/server-App.cmi
+o server-App.cmj : cp ../bs/src/backend/server-App.cmj
+o server-App.cmt : cp ../bs/src/backend/server-App.cmt
+o server.ml : cp ../../src/backend/server.ml
+o App-App.cmi : cp ../bs/src/frontend/App-App.cmi
+o App-App.cmj : cp ../bs/src/frontend/App-App.cmj
+o App-App.cmt : cp ../bs/src/frontend/App-App.cmt
+o App.res : cp ../../src/frontend/App.res
+o NumberButton-App.cmi : cp ../bs/src/frontend/NumberButton-App.cmi
+o NumberButton-App.cmj : cp ../bs/src/frontend/NumberButton-App.cmj
+o NumberButton-App.cmt : cp ../bs/src/frontend/NumberButton-App.cmt
+o NumberButton.res : cp ../../src/frontend/NumberButton.res
+o App.cmi : cp ../bs/App.cmi
+o App.cmj : cp ../bs/App.cmj
+o App.cmt : cp ../bs/App.cmt
+build install.stamp : touch server-App.cmi server-App.cmj App-App.cmi App-App.cmj NumberButton-App.cmi NumberButton-App.cmj App.cmi App.cmj

@@ -1,9 +1,21 @@
 {
+    "name": "numerade",
     "dependencies": {
         "esy": "^0.6.12",
-        "ocaml": "4.10.x"
+        "ocaml": "4.10.x",
+        "@rescript/react": "0.10.3",
+        "@ryyppy/rescript-promise": "^2.1.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
     },
     "scripts": {
-        "start": "node server.ml"
-    }
+        "build": "rescript build",
+        "start": "rescript build -w",
+        "res:clean":"rescript clean -with-deps"
+    },
+    "keywords":[
+        "rescript"
+    ]
 }
+
+
