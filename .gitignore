@@ -3,6 +3,18 @@
 .idea/*
 . MLtest/_build/*
 
+# testing
+/coverage
+
+# production
+/build
+
+frontend/.vercel
+.frontend
+frontend/.bsb.lock
+frontend/.merlin
+frontend/**/*.bs.js
+
 ocaml-torch
 *.cmt
 MLtest/_build/default/.example.eobjs/byte/dune__exe.cmt
