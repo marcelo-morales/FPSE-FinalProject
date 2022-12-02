@@ -22,7 +22,7 @@ let sanitize (s : string) : string option =
   | 0 -> None
   | _ -> (
       let new_string =
-        Str.global_replace (Str.regexp "[^a-zA-Z0-9.]+") " " s |> String.lowercase
+        Str.global_replace (Str.regexp "[^0-9.]+") " " s |> String.lowercase
       in
       match String.length new_string with 0 -> None | _ -> Some new_string)
 
