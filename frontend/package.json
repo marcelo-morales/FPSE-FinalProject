@@ -1,0 +1,22 @@
+{
+    "name": "numerade",
+    "dependencies": {
+        "@rescript/react": "0.10.3",
+        "@ryyppy/rescript-promise": "^2.1.0",
+        "esy": "^0.6.12",
+        "ocaml": "4.10.x",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "vite": "^3.2.4"
+    },
+    "scripts": {
+        "build": "rescript build",
+        "start": "rescript build -w",
+        "res:clean": "rescript clean -with-deps",
+        "serve": "vite serve",
+        "server": "vite"
+    },
+    "keywords": [
+        "rescript"
+    ]
+}

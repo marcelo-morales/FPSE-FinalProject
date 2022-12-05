@@ -1,0 +1,6 @@
+(executable
+ (name server)
+ (modules server)
+ (libraries dream))
+
+(data_only_dirs lib node_modules)
