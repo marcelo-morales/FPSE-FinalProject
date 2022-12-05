@@ -19,7 +19,7 @@ let epochs = 50
 let learning_rate = 1e-3
 
 let mnist = Mnist_helper.read_files () 
-let { Dataset_helper.train_images; train_lagibels; _ } = mnist 
+let { Dataset_helper.train_images; train_labels; _ } = mnist 
 let vs = Var_store.create ~name:"nn" () 
 let linear1 =
   Layer.linear vs hidden_nodes ~activation:Relu ~input_dim:Mnist_helper.image_dim
