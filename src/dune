@@ -1,10 +1,5 @@
-<<<<<<< Updated upstream
-(executable
- (name server)
- (modules server)
- (libraries dream))
 
-=======
+
 
 (library
   (name readfile)
@@ -17,7 +12,7 @@
  (modules server)
  (libraries dream))
 
-(library
+(executable
   (name train_conv)
   (modules train_conv)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
@@ -28,5 +23,5 @@
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
 
->>>>>>> Stashed changes
+
 (data_only_dirs lib node_modules)

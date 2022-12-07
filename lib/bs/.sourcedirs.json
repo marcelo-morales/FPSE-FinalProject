@@ -1,1 +1,0 @@
-{ "dirs" : [ "src" , "src/backend" , "src/frontend" ] , "pkgs" : [ [ "@ryyppy/rescript-promise" , "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/node_modules/@ryyppy/rescript-promise" ] , [ "@rescript/react" , "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/node_modules/@rescript/react" ] ] , "generated" : [] }
