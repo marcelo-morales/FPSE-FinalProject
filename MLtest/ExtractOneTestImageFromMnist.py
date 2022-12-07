@@ -20,7 +20,7 @@ print(test_X[0].dtype.byteorder)
     # pyplot.show()
     
 
-selectedImage=test_X[2].astype(float)
+selectedImage=test_X[6].astype(float)
 print(selectedImage.dtype)
 print(selectedImage.dtype.byteorder)
 

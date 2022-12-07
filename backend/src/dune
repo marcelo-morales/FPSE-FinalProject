@@ -16,6 +16,6 @@
  (modules server)
  (libraries core lib dream)
  (preprocess
-  (pps lwt_ppx ppx_deriving_yojson))
+  (pps lwt_ppx ppx_deriving_yojson)))
 
-(data_only_dirs lib node_modules))
+; (data_only_dirs lib node_modules))

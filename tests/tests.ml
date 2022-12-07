@@ -6,9 +6,15 @@ open OUnit2
 open Predict_conv
 
 
+(* let path = Core_unix.getcwd () *)
 
-let image_name_and_path = "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/tests/handwrittenImageOfOne.txt"
-let weights_name_and_path = "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/tests/weights"
+let folder_path = "../../../tests/"
+
+
+let image_name_and_path = folder_path^"handwrittenImageOfOne.txt"
+let weights_name_and_path = folder_path^"weights"
+
+
 
 
 let miscellaneous_tests _ =

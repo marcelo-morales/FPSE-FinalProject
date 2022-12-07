@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< Updated upstream
+
 (executable
  (name server)
  (modules server)
  (libraries dream))
-
-=======
-=======
-
-
->>>>>>> 749660463f2ede2d05609f35e349a743070ceef7
 
 (library
   (name readfile)
@@ -17,10 +10,6 @@
   (libraries 
   torch npy core_unix core_unix.sys_unix))
 
-(executable
- (name server)
- (modules server)
- (libraries dream))
 
 (executable
   (name train_conv)
@@ -33,5 +22,4 @@
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
 
-
-(data_only_dirs lib node_modules)
+; (data_only_dirs lib node_modules)
