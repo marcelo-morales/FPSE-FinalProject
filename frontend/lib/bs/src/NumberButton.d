@@ -1,1 +1,1 @@
-src/NumberButton-Numerade.cmj : Numerade.cmi
+src/NumberButton-Frontend.cmj : Frontend.cmi

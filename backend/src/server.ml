@@ -2,6 +2,7 @@
 
 open Lib
 open Core
+open Array
 
 (* let () =
   Dream.run (fun _ ->
@@ -26,8 +27,17 @@ let welcome : Dream.route =
   e.g., localhost:8080/result
 *)
 let result : Dream.route =
-  Dream.get "/result" (fun _ ->
-    Dream.get "/" (fun request -> Dream.html "get result")
+  Dream.get "/result" (fun req ->
+    match Dream.all_queries req with
+    | [ ("nums", nums); ("ops", ops) ] ->
+      let numsArray, operations = float array , string array  in
+      (* calculate result *)
+    (* /Game.buy ~btc ~price:!real_price ~transaction_time:timestamp *)
+      |> Dream.json
+           ~status:(Dream.int_to_status 200)
+           ~headers:[ "Access-Control-Allow-Origin", "*" ]
+    | _ ->
+      Dream.json ~status:`Bad_Request ~headers:[ "Access-Control-Allow-Origin", "*" ] "")
 ;;
 
 (* Template for catching error statuses and forwarding errors to the client *)

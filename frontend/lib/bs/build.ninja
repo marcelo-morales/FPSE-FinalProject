@@ -2,24 +2,51 @@ rescript = 1
 g_finger := /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/@rescript/react/lib/ocaml/install.stamp
 g_finger := /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/@ryyppy/rescript-promise/lib/ocaml/install.stamp
 rule astj
-  command = /Users/marcelomorales/node_modules/rescript/darwin/bsc.exe -w +A-9-40-42-48 -warn-error +A-3-40-42-44-102 -bs-v 10.0.1 -bs-jsx 3  -absname -bs-ast -o $out $i
+  command = /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/rescript/darwin/bsc.exe -w +A-9-40-42-48 -warn-error +A-3-40-42-44-102 -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
 o src/App.ast : astj ../../src/App.res
 rule deps
-  command = /Users/marcelomorales/node_modules/rescript/darwin/bsb_helper.exe -hash f9b4f285cd7be661a5e7504b919d2f57 -bs-ns Numerade $in
+  command = /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/rescript/darwin/bsb_helper.exe -hash 77d0611d79dfef132b1fe212b8b8e5a5 -bs-ns Frontend $in
   restat = 1
 o src/App.d : deps src/App.ast
 rule mij
-  command = /Users/marcelomorales/node_modules/rescript/darwin/bsc.exe -bs-ns Numerade -I . -I src/components -I src/pages -I src -I /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/@rescript/react/lib/ocaml -I /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/@ryyppy/rescript-promise/lib/ocaml  -w +A-9-40-42-48 -warn-error +A-3-40-42-44-102 -bs-package-name numerade -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
+  command = /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/rescript/darwin/bsc.exe -bs-ns Frontend -I . -I src/utils -I src/components -I src/pages -I src -I /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/@rescript/react/lib/ocaml -I /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/@ryyppy/rescript-promise/lib/ocaml  -w +A-9-40-42-48 -warn-error +A-3-40-42-44-102 -bs-package-name frontend -bs-package-output es6:$in_d:.bs.js -bs-v $g_finger $i
   dyndep = 1
   restat = 1
-o src/App-Numerade.cmj src/App-Numerade.cmi ../../src/App.bs.js : mij src/App.ast
+o src/App-Frontend.cmj src/App-Frontend.cmi ../../src/App.bs.js : mij src/App.ast
 o src/Index.ast : astj ../../src/Index.res
 o src/Index.d : deps src/Index.ast
-o src/Index-Numerade.cmj src/Index-Numerade.cmi ../../src/Index.bs.js : mij src/Index.ast
+o src/Index-Frontend.cmj src/Index-Frontend.cmi ../../src/Index.bs.js : mij src/Index.ast
 o src/NumberButton.ast : astj ../../src/NumberButton.res
 o src/NumberButton.d : deps src/NumberButton.ast
-o src/NumberButton-Numerade.cmj src/NumberButton-Numerade.cmi ../../src/NumberButton.bs.js : mij src/NumberButton.ast
+o src/NumberButton-Frontend.cmj src/NumberButton-Frontend.cmi ../../src/NumberButton.bs.js : mij src/NumberButton.ast
+o src/pages/Home.ast : astj ../../src/pages/Home.res
+o src/pages/Home.d : deps src/pages/Home.ast
+o src/pages/Home-Frontend.cmj src/pages/Home-Frontend.cmi ../../src/pages/Home.bs.js : mij src/pages/Home.ast
+o src/pages/Result.ast : astj ../../src/pages/Result.res
+o src/pages/Result.d : deps src/pages/Result.ast
+o src/pages/Result-Frontend.cmj src/pages/Result-Frontend.cmi ../../src/pages/Result.bs.js : mij src/pages/Result.ast
+o src/pages/NotFound.ast : astj ../../src/pages/NotFound.res
+o src/pages/NotFound.d : deps src/pages/NotFound.ast
+o src/pages/NotFound-Frontend.cmj src/pages/NotFound-Frontend.cmi ../../src/pages/NotFound.bs.js : mij src/pages/NotFound.ast
+o src/components/Header.ast : astj ../../src/components/Header.res
+o src/components/Header.d : deps src/components/Header.ast
+o src/components/Header-Frontend.cmj src/components/Header-Frontend.cmi ../../src/components/Header.bs.js : mij src/components/Header.ast
+o src/components/TitleText.ast : astj ../../src/components/TitleText.res
+o src/components/TitleText.d : deps src/components/TitleText.ast
+o src/components/TitleText-Frontend.cmj src/components/TitleText-Frontend.cmi ../../src/components/TitleText.bs.js : mij src/components/TitleText.ast
+o src/components/PopupError.ast : astj ../../src/components/PopupError.res
+o src/components/PopupError.d : deps src/components/PopupError.ast
+o src/components/PopupError-Frontend.cmj src/components/PopupError-Frontend.cmi ../../src/components/PopupError.bs.js : mij src/components/PopupError.ast
+o src/utils/Icon.ast : astj ../../src/utils/Icon.res
+o src/utils/Icon.d : deps src/utils/Icon.ast
+o src/utils/Icon-Frontend.cmj src/utils/Icon-Frontend.cmi ../../src/utils/Icon.bs.js : mij src/utils/Icon.ast
+o src/utils/Type.ast : astj ../../src/utils/Type.res
+o src/utils/Type.d : deps src/utils/Type.ast
+o src/utils/Type-Frontend.cmj src/utils/Type-Frontend.cmi ../../src/utils/Type.bs.js : mij src/utils/Type.ast
+o src/utils/Utils.ast : astj ../../src/utils/Utils.res
+o src/utils/Utils.d : deps src/utils/Utils.ast
+o src/utils/Utils-Frontend.cmj src/utils/Utils-Frontend.cmi ../../src/utils/Utils.bs.js : mij src/utils/Utils.ast
 rule build_package
-  command = /Users/marcelomorales/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
+  command = /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/node_modules/rescript/darwin/bsc.exe -w -49 -color always -no-alias-deps  $i
   restat = 1
-o Numerade.cmi : build_package Numerade.mlmap
+o Frontend.cmi : build_package Frontend.mlmap
