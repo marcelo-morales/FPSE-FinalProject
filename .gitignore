@@ -16,6 +16,7 @@ frontend/.merlin
 frontend/**/*.bs.js
 
 frontend/node_modules
+frontend/lib/*
 frontend/lib/
 frontend/.bsb.lock
 
