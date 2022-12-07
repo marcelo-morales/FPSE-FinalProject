@@ -16,6 +16,29 @@
  (modules server)
  (libraries core lib dream)
  (preprocess
-  (pps lwt_ppx ppx_deriving_yojson))
+  (pps lwt_ppx ppx_deriving_yojson)))
 
-(data_only_dirs lib node_modules))
+  (library
+  (name readfile)
+  (modules readfile)
+  (libraries 
+  torch npy core_unix core_unix.sys_unix))
+
+(executable
+ (name server)
+ (modules server)
+ (libraries dream))
+
+(executable
+  (name train_conv)
+  (modules train_conv)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+
+(library
+  (name predict_conv)
+  (modules predict_conv)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+
+
+
+(data_only_dirs lib node_modules)
