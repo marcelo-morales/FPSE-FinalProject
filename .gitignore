@@ -16,6 +16,8 @@ frontend/.merlin
 frontend/**/*.bs.js
 frontend/node_modules
 
+node_modules/*
+
 
 
 ocaml-torch

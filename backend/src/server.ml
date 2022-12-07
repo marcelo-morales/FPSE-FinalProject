@@ -32,7 +32,7 @@ let result : Dream.route =
     | [ ("nums", nums); ("ops", ops) ] ->
       let numsArray, operations = float array , string array  in
       (* calculate result *)
-    (* /Game.buy ~btc ~price:!real_price ~transaction_time:timestamp *)
+    (* /Game.bsuy ~btc ~price:!real_price ~transaction_time:timestamp *)
       |> Dream.json
            ~status:(Dream.int_to_status 200)
            ~headers:[ "Access-Control-Allow-Origin", "*" ]
