@@ -1,3 +1,6 @@
+open Type
+
+
 exception FailedRequest(string)
 
 module Response = {
@@ -11,12 +14,14 @@ let params = {
 
 module Result = {
 
-  // @val
-  // external fetch: (string, 'params) => Promise.t<Response.t<res>> = "fetch"
+   type res = response<mathResult>
+
+  @val
+  external fetch: (string, 'params) => Promise.t<Response.t<res>> = "fetch"
 
   let get = (url: string) => {
     open Promise
-    // fetch(url, params)
+    fetch(url, params)
     ->then(res => Response.json(res))
     ->then(data =>
       switch data.code {

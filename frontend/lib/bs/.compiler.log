@@ -1,29 +1,12 @@
-#Start(1670438851749)
+#Start(1670441554736)
 
-  Syntax error!
-  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/utils/Utils.res:18:17-20:6
+  Warning number 44
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/pages/Home.res:1:1-10
 
-  16 ┆ 
-  17 ┆ let get = (url: string) => {
-  18 ┆   open Promise
-  19 ┆   // fetch(url, params)
-  20 ┆   ->then(res => Response.json(res))
-  21 ┆   ->then(data =>
-  22 ┆     switch data.code {
+  1 │ open Utils
+  2 │ 
+  3 │ @react.component
 
-  I'm not sure what to parse here when looking at "->".
+  this open statement shadows the module identifier Result (which is later used)
 
-
-  We've found a bug for you!
-  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/pages/Home.res:49:8-15
-
-  47 ┆ <div className="bg-frame w-full h-content flex flex-col-reverse pb-2">
-  48 ┆   <div className="h-8 mt-2 px-6 w-full flex items-center">
-  49 ┆     {hasError
-  50 ┆       ? <button
-  51 ┆           className="w-full start-btn font-serif border-2 border-white 
-     ┆ rounded-md hover:drop-shadow-lg transition duration-150 ease-in"
-
-  The value hasError can't be found
-
-#Done(1670438851999)
+#Done(1670441554894)
