@@ -17,6 +17,13 @@ frontend/**/*.bs.js
 frontend/node_modules
 
 node_modules/*
+# dependencies
+backend/node_modules
+frontend/node_modules
+node_modules/
+
+lib/
+lib/*
 
 
 frontend/node_modules
