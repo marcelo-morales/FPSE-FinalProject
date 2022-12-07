@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 rescript = 1
 rule cp
   command = cp $i $out
@@ -16,35 +15,6 @@ o NumberButton-Frontend.cmi : cp ../bs/src/NumberButton-Frontend.cmi
 o NumberButton-Frontend.cmj : cp ../bs/src/NumberButton-Frontend.cmj
 o NumberButton-Frontend.cmt : cp ../bs/src/NumberButton-Frontend.cmt
 o NumberButton.res : cp ../../src/NumberButton.res
-<<<<<<< HEAD
-o Numerade.cmi : cp ../bs/Numerade.cmi
-o Numerade.cmj : cp ../bs/Numerade.cmj
-o Numerade.cmt : cp ../bs/Numerade.cmt
-build install.stamp : touch App-Numerade.cmi App-Numerade.cmj Index-Numerade.cmi Index-Numerade.cmj NumberButton-Numerade.cmi NumberButton-Numerade.cmj Numerade.cmi Numerade.cmj
-=======
-rescript = 1
-rule cp
-  command = cp $i $out
-rule touch
- command = touch $out
-o App-Numerade.cmi : cp ../bs/src/App-Numerade.cmi
-o App-Numerade.cmj : cp ../bs/src/App-Numerade.cmj
-o App-Numerade.cmt : cp ../bs/src/App-Numerade.cmt
-o App.res : cp ../../src/App.res
-o Index-Numerade.cmi : cp ../bs/src/Index-Numerade.cmi
-o Index-Numerade.cmj : cp ../bs/src/Index-Numerade.cmj
-o Index-Numerade.cmt : cp ../bs/src/Index-Numerade.cmt
-o Index.res : cp ../../src/Index.res
-o NumberButton-Numerade.cmi : cp ../bs/src/NumberButton-Numerade.cmi
-o NumberButton-Numerade.cmj : cp ../bs/src/NumberButton-Numerade.cmj
-o NumberButton-Numerade.cmt : cp ../bs/src/NumberButton-Numerade.cmt
-o NumberButton.res : cp ../../src/NumberButton.res
-o Numerade.cmi : cp ../bs/Numerade.cmi
-o Numerade.cmj : cp ../bs/Numerade.cmj
-o Numerade.cmt : cp ../bs/Numerade.cmt
-build install.stamp : touch App-Numerade.cmi App-Numerade.cmj Index-Numerade.cmi Index-Numerade.cmj NumberButton-Numerade.cmi NumberButton-Numerade.cmj Numerade.cmi Numerade.cmj
->>>>>>> 97290ea1dec511a994b804307bed581e1019c78d
-=======
 o Home-Frontend.cmi : cp ../bs/src/pages/Home-Frontend.cmi
 o Home-Frontend.cmj : cp ../bs/src/pages/Home-Frontend.cmj
 o Home-Frontend.cmt : cp ../bs/src/pages/Home-Frontend.cmt
@@ -85,4 +55,3 @@ o Frontend.cmi : cp ../bs/Frontend.cmi
 o Frontend.cmj : cp ../bs/Frontend.cmj
 o Frontend.cmt : cp ../bs/Frontend.cmt
 build install.stamp : touch App-Frontend.cmi App-Frontend.cmj Index-Frontend.cmi Index-Frontend.cmj NumberButton-Frontend.cmi NumberButton-Frontend.cmj Home-Frontend.cmi Home-Frontend.cmj Result-Frontend.cmi Result-Frontend.cmj NotFound-Frontend.cmi NotFound-Frontend.cmj Header-Frontend.cmi Header-Frontend.cmj TitleText-Frontend.cmi TitleText-Frontend.cmj PopupError-Frontend.cmi PopupError-Frontend.cmj Icon-Frontend.cmi Icon-Frontend.cmj Type-Frontend.cmi Type-Frontend.cmj Utils-Frontend.cmi Utils-Frontend.cmj Frontend.cmi Frontend.cmj
->>>>>>> frontend

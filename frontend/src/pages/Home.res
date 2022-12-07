@@ -18,30 +18,30 @@ let make = (
     setInput(_ => val)
   }
 
-  let handleMath = _evt => {
-    open Promise
-    let _ = {
-      setLoading(_ => true)
-      Result.get(j`http://localhost:8080/result?nums=${456}&ops=${plusminus}`)
-      ->then(ret => {
-        switch ret {
-        | Ok(_) =>
-          setLoading(_ => false)
-          setHasError(_ => false)
-          resolve()
-        | Error(msg) =>
-          setLoading(_ => false)
-          reject(FailedRequest("Error: " ++ msg))
-        }
-      })
-      ->catch(e => {
-        switch e {
-        | FailedRequest(msg) => Js.log("Operation failed! " ++ msg)
-        | _ => Js.log("Unknown error")
-        }
-        resolve()
-      })
-    }
+//   let handleMath = _evt => {
+//     open Promise
+//     let _ = {
+//       setLoading(_ => true)
+//       Result.get(j`http://localhost:8080/result?nums=${456}&ops=${plusminus}`)
+//       ->then(ret => {
+//         switch ret {
+//         | Ok(_) =>
+//           setLoading(_ => false)
+//           setHasError(_ => false)
+//           resolve()
+//         | Error(msg) =>
+//           setLoading(_ => false)
+//           reject(FailedRequest("Error: " ++ msg))
+//         }
+//       })
+//       ->catch(e => {
+//         switch e {
+//         | FailedRequest(msg) => Js.log("Operation failed! " ++ msg)
+//         | _ => Js.log("Unknown error")
+//         }
+//         resolve()
+//       })
+//     }
   }
 
   <div className="bg-frame w-full h-content flex flex-col-reverse pb-2">
@@ -131,4 +131,4 @@ let make = (
           <Transactions list />
         </>}
   </div>
-}
+

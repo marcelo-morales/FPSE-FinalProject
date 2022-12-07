@@ -11,12 +11,12 @@ let params = {
 
 module Result = {
 
-  @val
-  external fetch: (string, 'params) => Promise.t<Response.t<res>> = "fetch"
+  // @val
+  // external fetch: (string, 'params) => Promise.t<Response.t<res>> = "fetch"
 
   let get = (url: string) => {
     open Promise
-    fetch(url, params)
+    // fetch(url, params)
     ->then(res => Response.json(res))
     ->then(data =>
       switch data.code {
