@@ -1,0 +1,21 @@
+(library
+ (name lib)
+ (modules lib)
+ (libraries
+  core
+  torch
+  cohttp-lwt-unix
+  yojson
+  ppx_deriving_yojson.runtime
+  )
+ (preprocess
+  (pps ppx_deriving_yojson bisect_ppx)))
+
+(executable
+ (name server)
+ (modules server)
+ (libraries core lib dream)
+ (preprocess
+  (pps lwt_ppx ppx_deriving_yojson))
+
+(data_only_dirs lib node_modules))

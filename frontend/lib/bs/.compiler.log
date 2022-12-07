@@ -1,17 +1,49 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Start(1669947199724)
+=======
+#Start(1670385667690)
+>>>>>>> frontend
 
   We've found a bug for you!
-  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/Index.res:4:34-36
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/utils/Utils.res:15:61-63
 
+  13 ┆ 
+  14 ┆ @val
+  15 ┆ external fetch: (string, 'params) => Promise.t<Response.t<res>> = "fetc
+     ┆ h"
+  16 ┆ 
+  17 ┆ let get = (url: string) => {
+
+  This type constructor, `res`, can't be found.
+  
+  
+  Hint: Did you mean ref?
+
+
+  Warning number 44
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/pages/Home.res:1:1-9
+
+  1 │ open Belt
   2 │ 
-  3 │ switch ReactDOM.querySelector("#root") {
-  4 │ | Some(root) => ReactDOM.render(<App />, root)
-  5 │ | None => () // do nothing
-  6 │ }
+  3 │ @react.component
 
-  The value make can't be found in App
+  this open statement shadows the module identifier Result (which is later used)
 
+
+  We've found a bug for you!
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/pages/Home.res:25:7-16
+
+  23 ┆ let _ = {
+  24 ┆   setLoading(_ => true)
+  25 ┆   Result.get(j`http://localhost:8080/result?nums=${456}&ops=${plusminus
+     ┆ }`)
+  26 ┆   ->then(ret => {
+  27 ┆     switch ret {
+
+  The value get can't be found in Result
+
+<<<<<<< HEAD
 FAILED: cannot make progress due to previous errors.
 #Done(1669947199825)
 =======
@@ -31,3 +63,6 @@ FAILED: cannot make progress due to previous errors.
 FAILED: cannot make progress due to previous errors.
 #Done(1669947199825)
 >>>>>>> 97290ea1dec511a994b804307bed581e1019c78d
+=======
+#Done(1670385667712)
+>>>>>>> frontend
