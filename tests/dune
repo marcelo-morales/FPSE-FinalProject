@@ -1,0 +1,10 @@
+(test
+  (name tests)
+  (libraries
+    core
+    ounit2
+    torch
+    readfile
+    predict_conv
+    )
+    )

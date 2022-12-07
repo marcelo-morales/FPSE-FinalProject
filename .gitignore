@@ -15,6 +15,11 @@ frontend/.bsb.lock
 frontend/.merlin
 frontend/**/*.bs.js
 
+frontend/node_modules
+frontend/lib/
+frontend/.bsb.lock
+
+
 
 ocaml-torch
 *.cmt
@@ -29,4 +34,9 @@ MLtest/_build
 MLtest/_build
 MLtest/_build/
 
+src/*
+
 *.cmi
+
+_build
+_build/ 

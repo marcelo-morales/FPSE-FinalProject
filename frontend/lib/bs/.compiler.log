@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Start(1669947199724)
 
   We've found a bug for you!
@@ -13,3 +14,20 @@
 
 FAILED: cannot make progress due to previous errors.
 #Done(1669947199825)
+=======
+#Start(1669947199724)
+
+  We've found a bug for you!
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/Index.res:4:34-36
+
+  2 │ 
+  3 │ switch ReactDOM.querySelector("#root") {
+  4 │ | Some(root) => ReactDOM.render(<App />, root)
+  5 │ | None => () // do nothing
+  6 │ }
+
+  The value make can't be found in App
+
+FAILED: cannot make progress due to previous errors.
+#Done(1669947199825)
+>>>>>>> 97290ea1dec511a994b804307bed581e1019c78d

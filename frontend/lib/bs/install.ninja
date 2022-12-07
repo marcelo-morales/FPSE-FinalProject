@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 rescript = 1
 rule cp
   command = cp $i $out
@@ -19,3 +20,26 @@ o Numerade.cmi : cp ../bs/Numerade.cmi
 o Numerade.cmj : cp ../bs/Numerade.cmj
 o Numerade.cmt : cp ../bs/Numerade.cmt
 build install.stamp : touch App-Numerade.cmi App-Numerade.cmj Index-Numerade.cmi Index-Numerade.cmj NumberButton-Numerade.cmi NumberButton-Numerade.cmj Numerade.cmi Numerade.cmj
+=======
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o App-Numerade.cmi : cp ../bs/src/App-Numerade.cmi
+o App-Numerade.cmj : cp ../bs/src/App-Numerade.cmj
+o App-Numerade.cmt : cp ../bs/src/App-Numerade.cmt
+o App.res : cp ../../src/App.res
+o Index-Numerade.cmi : cp ../bs/src/Index-Numerade.cmi
+o Index-Numerade.cmj : cp ../bs/src/Index-Numerade.cmj
+o Index-Numerade.cmt : cp ../bs/src/Index-Numerade.cmt
+o Index.res : cp ../../src/Index.res
+o NumberButton-Numerade.cmi : cp ../bs/src/NumberButton-Numerade.cmi
+o NumberButton-Numerade.cmj : cp ../bs/src/NumberButton-Numerade.cmj
+o NumberButton-Numerade.cmt : cp ../bs/src/NumberButton-Numerade.cmt
+o NumberButton.res : cp ../../src/NumberButton.res
+o Numerade.cmi : cp ../bs/Numerade.cmi
+o Numerade.cmj : cp ../bs/Numerade.cmj
+o Numerade.cmt : cp ../bs/Numerade.cmt
+build install.stamp : touch App-Numerade.cmi App-Numerade.cmj Index-Numerade.cmi Index-Numerade.cmj NumberButton-Numerade.cmi NumberButton-Numerade.cmj Numerade.cmi Numerade.cmj
+>>>>>>> 97290ea1dec511a994b804307bed581e1019c78d
