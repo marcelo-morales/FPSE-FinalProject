@@ -6,20 +6,15 @@ open Core
 open Predict_conv
 
 
+(* Predict_conv.ml is the only file we are testing *)
+
 let path = Core_unix.getcwd ()
 
-(* let folder_path = path  *)
-(* let folder_path = "../../../tests/" *)
-(* heyo *)
-(* yolo *)
-
-let () = print_endline path;;
 
 let fixedpath = String.slice path (0) (-28 + String.length path);;
 
-let folder_path = fixedpath
-let image_name_and_path = folder_path^"backend/tests/"^"handwrittenImageOfOne.txt"
-let weights_name_and_path = folder_path^"backend/tests/"^"weights"
+let image_name_and_path = fixedpath^"backend/tests/"^"handwrittenImageOfOne.txt"
+let weights_name_and_path = fixedpath^"backend/tests/"^"weights"
 
 
 

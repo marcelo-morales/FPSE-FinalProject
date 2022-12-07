@@ -9,6 +9,7 @@
 # production
 /build
 /_build
+_build
 
 frontend/.vercel
 .frontend
