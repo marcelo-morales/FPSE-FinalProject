@@ -38,7 +38,9 @@
 (library
   (name predict_conv)
   (modules predict_conv)
-  (libraries core torch npy core_unix core_unix.sys_unix readfile))
+  (libraries core torch npy core_unix core_unix.sys_unix readfile)
+  (preprocess (pps bisect_ppx))
+  )
 
 
 

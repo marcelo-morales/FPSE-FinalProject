@@ -1,0 +1,5 @@
+lib: [
+  "_build/install/default/lib/numerade/META"
+  "_build/install/default/lib/numerade/dune-package"
+  "_build/install/default/lib/numerade/opam"
+]

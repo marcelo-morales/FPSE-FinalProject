@@ -1,0 +1,14 @@
+(test
+  (name tests)
+  (libraries
+    core
+    ounit2
+    torch
+    readfile
+    predict_conv
+    core_unix
+    core_unix.sys_unix
+
+    )
+    
+    )
