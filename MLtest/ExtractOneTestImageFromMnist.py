@@ -29,8 +29,8 @@ selectedImage[selectedImage!=0]=1
 # print(selectedImage)
 
 np.savetxt("handwrittenImage.txt",selectedImage,fmt='%19.2f')
-np.savez("handwrittenImage",selectedImage)
-np.save("handwrittenImage",selectedImage)
+# np.savez("handwrittenImage",selectedImage)
+# np.save("handwrittenImage",selectedImage)
 
 print(selectedImage)
 plt.imshow(selectedImage)

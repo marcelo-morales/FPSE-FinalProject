@@ -52,6 +52,6 @@ let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
     Tensor.(argmax ~dim:(-1)  (test_model (Tensor.unsqueeze t2 ~dim:0 ))) |> Tensor.to_float0_exn in
     int_of_float test_accuracy_on_image
 
-(* let () = printf "\nNeural Network predicts: %i \n" (predictImageFromFileName "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/src/handwrittenImageOfOne.txt" "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/src/weights" )  ExampleTest *)
+(* let () = printf "\nNeural Network predicts: %i \n" (predictImageFromFileName "handwrittenImage.txt")  (*ExampleTest*) *)
 
 
