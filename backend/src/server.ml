@@ -1,8 +1,8 @@
 [@@@warning "-27"]
 
-open Lib
-open Core
-open Array
+(* open Core
+open Lib *)
+(* open Array *)
 
 (* let () =
   Dream.run (fun _ ->
@@ -26,22 +26,20 @@ let welcome : Dream.route =
   Get result of math operation.
   e.g., localhost:8080/result
 *)
-let result : Dream.route =
+(* let result : Dream.route =
   Dream.get "/result" (fun req ->
     match Dream.all_queries req with
     | [ ("nums", nums); ("ops", ops) ] ->
       let numsArray, operations = float array , string array  in
-      (* calculate result *)
-    (* /Game.bsuy ~btc ~price:!real_price ~transaction_time:timestamp *)
       |> Dream.json
            ~status:(Dream.int_to_status 200)
            ~headers:[ "Access-Control-Allow-Origin", "*" ]
     | _ ->
       Dream.json ~status:`Bad_Request ~headers:[ "Access-Control-Allow-Origin", "*" ] "")
-;;
+;; *)
 
 (* Template for catching error statuses and forwarding errors to the client *)
-let my_error_template debug_info suggested_response =
+(* let my_error_template debug_info suggested_response =
   let status = Dream.status suggested_response in
   let code = Dream.status_to_int status
   and msg = Dream.status_to_string status in
@@ -58,5 +56,5 @@ let () =
   @@ Dream.memory_sessions
   @@ Dream.router [ welcome; result ]
   @@ Dream.not_found
-;;
+;; *)
 

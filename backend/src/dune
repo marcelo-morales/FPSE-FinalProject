@@ -4,30 +4,31 @@
  (libraries
   core
   torch
-  cohttp-lwt-unix
   yojson
   ppx_deriving_yojson.runtime
   )
  (preprocess
   (pps ppx_deriving_yojson bisect_ppx)))
 
-(executable
+(library
  (name server)
  (modules server)
- (libraries core lib dream)
+ (libraries
+  core
+  torch
+  yojson
+  lib
+  ppx_deriving_yojson.runtime
+  dream
+  )
  (preprocess
-  (pps lwt_ppx ppx_deriving_yojson)))
+  (pps ppx_deriving_yojson bisect_ppx)))
 
   (library
   (name readfile)
   (modules readfile)
   (libraries 
   torch npy core_unix core_unix.sys_unix))
-
-(executable
- (name server)
- (modules server)
- (libraries dream))
 
 (executable
   (name train_conv)
