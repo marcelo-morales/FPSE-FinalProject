@@ -1,28 +1,3 @@
-<<<<<<< Updated upstream
-.DS_Store
-.vscode/*
-.idea/*
-. MLtest/_build/*
-
-
-ocaml-torch
-*.cmt
-MLtest/_build/default/.example.eobjs/byte/dune__exe.cmt
-MLtest/_build/default/.example.eobjs/native/dune__exe.o
-*.o
-
-MLtest\_build
-MLtest\_build\
-
-MLtest/_build
-MLtest/_build
-MLtest/_build/
-
-*.cmi
-
-
-_build
-=======
 .DS_Store
 .vscode/*
 .idea/*
@@ -40,6 +15,11 @@ frontend/.bsb.lock
 frontend/.merlin
 frontend/**/*.bs.js
 
+frontend/node_modules
+frontend/lib/
+frontend/.bsb.lock
+
+
 
 ocaml-torch
 *.cmt
@@ -54,8 +34,9 @@ MLtest/_build
 MLtest/_build
 MLtest/_build/
 
+src/*
+
 *.cmi
 
 _build
 _build/ 
->>>>>>> Stashed changes
