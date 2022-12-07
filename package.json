@@ -1,9 +1,0 @@
-{
-    "dependencies": {
-        "esy": "^0.6.12",
-        "ocaml": "4.10.x"
-    },
-    "scripts": {
-        "start": "node server.ml"
-    }
-}
