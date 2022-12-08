@@ -2,9 +2,9 @@
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root:
-# /mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject
+# /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject
 # Auto-detected concurrency: 8
-$ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_545024_output
+$ /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/ff/_sjj_2354q75hmd476t79bwr0000gn/T/dune_aa67ec_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,75 +13,80 @@ $ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_545024_output
 #  ; for_host = None
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
-#  ; toplevel_path = Some External "/home/rawstone/.opam/4.14.0/lib/toplevel"
-#  ; ocaml_bin = External "/home/rawstone/.opam/4.14.0/bin"
-#  ; ocaml = Ok External "/home/rawstone/.opam/4.14.0/bin/ocaml"
-#  ; ocamlc = External "/home/rawstone/.opam/4.14.0/bin/ocamlc.opt"
-#  ; ocamlopt = Ok External "/home/rawstone/.opam/4.14.0/bin/ocamlopt.opt"
-#  ; ocamldep = Ok External "/home/rawstone/.opam/4.14.0/bin/ocamldep.opt"
-#  ; ocamlmklib = Ok External "/home/rawstone/.opam/4.14.0/bin/ocamlmklib.opt"
+#  ; toplevel_path =
+#      Some External "/Users/marcelomorales/.opam/4.14.0/lib/toplevel"
+#  ; ocaml_bin = External "/Users/marcelomorales/.opam/4.14.0/bin"
+#  ; ocaml = Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocaml"
+#  ; ocamlc = External "/Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt"
+#  ; ocamlopt =
+#      Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocamlopt.opt"
+#  ; ocamldep =
+#      Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocamldep.opt"
+#  ; ocamlmklib =
+#      Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/home/rawstone/.opam/4.14.0/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/home/rawstone/.opam/4.14.0/lib/ocaml"
+#        { "DUNE_OCAML_HARDCODED" : "/Users/marcelomorales/.opam/4.14.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/Users/marcelomorales/.opam/4.14.0/lib/ocaml"
 #        ; "DUNE_SOURCEROOT" :
-#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject"
+#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject"
 #        ; "INSIDE_DUNE" :
-#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/default"
+#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/default"
+#        ; "MANPATH" :
+#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/bin"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/install/default/lib"
+#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/install/default/lib"
+#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/install/default/lib/toplevel"
+#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/home/rawstone/.opam/4.14.0/lib" ]
+#  ; findlib_paths = [ External "/Users/marcelomorales/.opam/4.14.0/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
-#      ; standard_library_default = "/home/rawstone/.opam/4.14.0/lib/ocaml"
-#      ; standard_library = "/home/rawstone/.opam/4.14.0/lib/ocaml"
+#      ; standard_library_default =
+#          "/Users/marcelomorales/.opam/4.14.0/lib/ocaml"
+#      ; standard_library = "/Users/marcelomorales/.opam/4.14.0/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "gcc"
+#      ; c_compiler = "cc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "gcc"
+#          [ "cc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
-#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; native_c_libraries = [ "-lm"; "-ldl" ]
+#      ; native_c_libraries = [ "-lm" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
 #      ; architecture = "amd64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "linux"
-#      ; asm = [ "as" ]
+#      ; system = "macosx"
+#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -92,8 +97,8 @@ $ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_545024_output
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-pc-linux-gnu"
-#      ; target = "x86_64-pc-linux-gnu"
+#      ; host = "x86_64-apple-darwin21.3.0"
+#      ; target = "x86_64-apple-darwin21.3.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -113,8 +118,9 @@ $ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_545024_output
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default/backend/tests && ./tests.exe)
-> /mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/default/backend/tests
-> .
-> Ran: 1 tests in: 0.20 seconds.
-> OK
+$ (cd _build/default && /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I backend/src/.readfile.objs/byte -I /Users/marcelomorales/.opam/4.14.0/lib/base -I /Users/marcelomorales/.opam/4.14.0/lib/base/base_internalhash_types -I /Users/marcelomorales/.opam/4.14.0/lib/base/caml -I /Users/marcelomorales/.opam/4.14.0/lib/base/md5 -I /Users/marcelomorales/.opam/4.14.0/lib/base/shadow_stdlib -I /Users/marcelomorales/.opam/4.14.0/lib/base_bigstring -I /Users/marcelomorales/.opam/4.14.0/lib/base_quickcheck -I /Users/marcelomorales/.opam/4.14.0/lib/base_quickcheck/ppx_quickcheck/runtime -I /Users/marcelomorales/.opam/4.14.0/lib/bigarray-compat -I /Users/marcelomorales/.opam/4.14.0/lib/bin_prot -I /Users/marcelomorales/.opam/4.14.0/lib/bin_prot/shape -I /Users/marcelomorales/.opam/4.14.0/lib/camlzip -I /Users/marcelomorales/.opam/4.14.0/lib/core -I /Users/marcelomorales/.opam/4.14.0/lib/core/base_for_tests -I /Users/marcelomorales/.opam/4.14.0/lib/core/validate -I /Users/marcelomorales/.opam/4.14.0/lib/core_kernel/caml_threads -I /Users/marcelomorales/.opam/4.14.0/lib/core_kernel/caml_unix -I /Users/marcelomorales/.opam/4.14.0/lib/core_kernel/flags -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix/error_checking_mutex -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix/signal_unix -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix/sys_unix -I /Users/marcelomorales/.opam/4.14.0/lib/ctypes -I /Users/marcelomorales/.opam/4.14.0/lib/fieldslib -I /Users/marcelomorales/.opam/4.14.0/lib/int_repr -I /Users/marcelomorales/.opam/4.14.0/lib/integers -I /Users/marcelomorales/.opam/4.14.0/lib/jane-street-headers -I /Users/marcelomorales/.opam/4.14.0/lib/npy -I /Users/marcelomorales/.opam/4.14.0/lib/ocaml/threads -I /Users/marcelomorales/.opam/4.14.0/lib/parsexp -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_assert/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_bench/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_compare/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_enumerate/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/collector -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/common -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/config -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/config_types -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_hash/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_here/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_inline_test/config -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_inline_test/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_log/types -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_module_timer/runtime -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_sexp_conv/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/sexplib -I /Users/marcelomorales/.opam/4.14.0/lib/sexplib/unix -I /Users/marcelomorales/.opam/4.14.0/lib/sexplib0 -I /Users/marcelomorales/.opam/4.14.0/lib/spawn -I /Users/marcelomorales/.opam/4.14.0/lib/splittable_random -I /Users/marcelomorales/.opam/4.14.0/lib/stdio -I /Users/marcelomorales/.opam/4.14.0/lib/stdlib-shims -I /Users/marcelomorales/.opam/4.14.0/lib/time_now -I /Users/marcelomorales/.opam/4.14.0/lib/torch -I /Users/marcelomorales/.opam/4.14.0/lib/torch/core -I /Users/marcelomorales/.opam/4.14.0/lib/typerep -I /Users/marcelomorales/.opam/4.14.0/lib/variantslib -I /Users/marcelomorales/.opam/4.14.0/lib/zip -no-alias-deps -opaque -o backend/src/.readfile.objs/byte/readfile.cmo -c -impl backend/src/readfile.ml)
+> File "backend/src/readfile.ml", line 8, characters 5-10:
+> 8 | open Torch
+>          ^^^^^
+> Error: Unbound module Torch
+[2]
