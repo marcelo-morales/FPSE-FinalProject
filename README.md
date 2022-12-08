@@ -30,7 +30,10 @@ To run the Dream Server as a localhost in your computer run (ensure you are in t
 
 ```
 cd frontend/
-dune build
+npm install
+npm start
+# in another tab
+npm run server
 ```
 
 and then go to http://localhost:8080/ to visit the local changes made to the site. There are additional instructions in [frontend](https://github.com/marcelo-morales/FPSE-FinalProject/tree/main/frontend) directory on how to run the web app.
