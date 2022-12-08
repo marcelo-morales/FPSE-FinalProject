@@ -18,12 +18,12 @@ opam install dream
 opam install rescript
 ```
 
-To run the MLtest, you have to be in the MLtest directory and do:
+To run a simple machine learning test, you have to be in the most outer folder:
 
 ```
-dune exec ./example.exe
+dune test
 ```
-
+Look at the test to see how it a function is run.
 
 To run the Dream Server as a localhost in your computer run (ensure you are in the frontend directory).:
 
