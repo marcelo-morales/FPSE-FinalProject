@@ -1,4 +1,7 @@
 {
+    "engines": {
+        "node": "14.x"
+      },
     "name": "frontend",
     "dependencies": {
         "@rescript/react": "0.10.3",

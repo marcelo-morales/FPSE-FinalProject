@@ -33,6 +33,7 @@ cd frontend/
 npm install
 npm start
 # in another tab
+cd frontend/
 npm run server
 ```
 
