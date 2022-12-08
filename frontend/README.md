@@ -2,12 +2,17 @@
 
 ## Run Project
 
+Ensure youa are in the frontend directory to run the Dream server and open the website in your local computer.
+
 ```sh
+cd frontend/ 
 npm install
 npm start
 # in another tab
 npm run server
 ```
+
+
 
 When both processes are running, open a browser at http://localhost:3000.
 

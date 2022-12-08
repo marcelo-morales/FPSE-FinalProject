@@ -25,14 +25,15 @@ dune exec ./example.exe
 ```
 
 
-To run the Dream Server as a localhost in your computer run:
+To run the Dream Server as a localhost in your computer run (ensure you are in the frontend directory).:
 
 ```
+cd frontend/
 dune build
 dune exec ./server.exe
 ```
 
-and then go to http://localhost:8080/ to visit the local changes made to the site.
+and then go to http://localhost:8080/ to visit the local changes made to the site. There are additional instructions in [frontend](https://github.com/marcelo-morales/FPSE-FinalProject/tree/main/frontend) directory on how to run the web app.
 
 
 ## User Manual
