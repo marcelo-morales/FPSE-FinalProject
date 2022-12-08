@@ -15,8 +15,9 @@ To install all the dependencies, do:
 ```
 opam install torch
 opam install dream
-opam install rescript
+npm install rescript
 ```
+. Ensure you have the package manager npm.
 
 To run the MLtest, you have to be in the MLtest directory and do:
 
@@ -30,7 +31,6 @@ To run the Dream Server as a localhost in your computer run (ensure you are in t
 ```
 cd frontend/
 dune build
-dune exec ./server.exe
 ```
 
 and then go to http://localhost:8080/ to visit the local changes made to the site. There are additional instructions in [frontend](https://github.com/marcelo-morales/FPSE-FinalProject/tree/main/frontend) directory on how to run the web app.
