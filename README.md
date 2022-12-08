@@ -18,6 +18,10 @@ opam install dream
 npm install rescript
 ```
 . Ensure you have the package manager npm.
+If you are on windows and you are missing npm do:
+```
+sudo apt install npm
+```
 
 To run a simple machine learning test, you have to be in the most outer folder:
 
