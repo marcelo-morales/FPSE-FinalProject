@@ -2,20 +2,28 @@
 (* open Core *)
 open OUnit2
 
-open Core
+(* open Core *)
 open Predict_conv
 
 
 (* Predict_conv.ml is the only file we are testing *)
 
-let path = Core_unix.getcwd ()
+let path = Core_unix.getcwd () 
+
+let () = print_endline path
+
+(*
 
 
 let fixedpath = String.slice path (0) (-28 + String.length path);;
 
 let image_name_and_path = fixedpath^"backend/tests/"^"handwrittenImageOfOne.txt"
-let weights_name_and_path = fixedpath^"backend/tests/"^"weights"
+let weights_name_and_path = fixedpath^"backend/tests/"^"weights" *)
 
+
+
+let image_name_and_path = "../../../../backend/tests/handwrittenImageOfOne.txt"
+let weights_name_and_path = "../../../../backend/tests/weights"
 
 
 let miscellaneous_tests _ =

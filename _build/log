@@ -2,9 +2,9 @@
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root:
-# /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject
+# /mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject
 # Auto-detected concurrency: 8
-$ /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/ff/_sjj_2354q75hmd476t79bwr0000gn/T/dune_aa67ec_output
+$ /home/rawstone/.opam/4.14.0/bin/ocamlc.opt -config > /tmp/dune_670a5f_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,80 +13,75 @@ $ /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/ff/_s
 #  ; for_host = None
 #  ; fdo_target_exe = None
 #  ; build_dir = "default"
-#  ; toplevel_path =
-#      Some External "/Users/marcelomorales/.opam/4.14.0/lib/toplevel"
-#  ; ocaml_bin = External "/Users/marcelomorales/.opam/4.14.0/bin"
-#  ; ocaml = Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocaml"
-#  ; ocamlc = External "/Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt"
-#  ; ocamlopt =
-#      Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocamlopt.opt"
-#  ; ocamldep =
-#      Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocamldep.opt"
-#  ; ocamlmklib =
-#      Ok External "/Users/marcelomorales/.opam/4.14.0/bin/ocamlmklib.opt"
+#  ; toplevel_path = Some External "/home/rawstone/.opam/4.14.0/lib/toplevel"
+#  ; ocaml_bin = External "/home/rawstone/.opam/4.14.0/bin"
+#  ; ocaml = Ok External "/home/rawstone/.opam/4.14.0/bin/ocaml"
+#  ; ocamlc = External "/home/rawstone/.opam/4.14.0/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/home/rawstone/.opam/4.14.0/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/home/rawstone/.opam/4.14.0/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/home/rawstone/.opam/4.14.0/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/Users/marcelomorales/.opam/4.14.0/lib"
-#        ; "DUNE_OCAML_STDLIB" : "/Users/marcelomorales/.opam/4.14.0/lib/ocaml"
+#        { "DUNE_OCAML_HARDCODED" : "/home/rawstone/.opam/4.14.0/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/home/rawstone/.opam/4.14.0/lib/ocaml"
 #        ; "DUNE_SOURCEROOT" :
-#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject"
 #        ; "INSIDE_DUNE" :
-#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/default"
-#        ; "MANPATH" :
-#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/bin"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/default"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/lib"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/lib"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/_build/install/default/lib/toplevel"
+#            "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/Users/marcelomorales/.opam/4.14.0/lib" ]
+#  ; findlib_paths = [ External "/home/rawstone/.opam/4.14.0/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
-#      ; standard_library_default =
-#          "/Users/marcelomorales/.opam/4.14.0/lib/ocaml"
-#      ; standard_library = "/Users/marcelomorales/.opam/4.14.0/lib/ocaml"
+#      ; standard_library_default = "/home/rawstone/.opam/4.14.0/lib/ocaml"
+#      ; standard_library = "/home/rawstone/.opam/4.14.0/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
-#      ; c_compiler = "cc"
+#      ; c_compiler = "gcc"
 #      ; ocamlc_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
 #      ; ocamlc_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; ocamlopt_cflags =
-#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread" ]
+#          [ "-O2"; "-fno-strict-aliasing"; "-fwrapv"; "-pthread"; "-fPIC" ]
 #      ; ocamlopt_cppflags = [ "-D_FILE_OFFSET_BITS=64" ]
 #      ; bytecomp_c_compiler =
-#          [ "cc"
+#          [ "gcc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
+#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-ldl"; "-lpthread" ]
 #      ; native_c_compiler =
-#          [ "cc"
+#          [ "gcc"
 #          ; "-O2"
 #          ; "-fno-strict-aliasing"
 #          ; "-fwrapv"
 #          ; "-pthread"
+#          ; "-fPIC"
 #          ; "-D_FILE_OFFSET_BITS=64"
 #          ]
-#      ; native_c_libraries = [ "-lm" ]
+#      ; native_c_libraries = [ "-lm"; "-ldl" ]
 #      ; native_pack_linker = [ "ld"; "-r"; "-o" ]
 #      ; cc_profile = []
 #      ; architecture = "amd64"
 #      ; model = "default"
 #      ; int_size = 63
 #      ; word_size = 64
-#      ; system = "macosx"
-#      ; asm = [ "cc"; "-c"; "-Wno-trigraphs" ]
+#      ; system = "linux"
+#      ; asm = [ "as" ]
 #      ; asm_cfi_supported = true
 #      ; with_frame_pointers = false
 #      ; ext_exe = ""
@@ -97,8 +92,8 @@ $ /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/ff/_s
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-apple-darwin21.3.0"
-#      ; target = "x86_64-apple-darwin21.3.0"
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -118,9 +113,10 @@ $ /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/ff/_s
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/marcelomorales/.opam/4.14.0/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I backend/src/.readfile.objs/byte -I /Users/marcelomorales/.opam/4.14.0/lib/base -I /Users/marcelomorales/.opam/4.14.0/lib/base/base_internalhash_types -I /Users/marcelomorales/.opam/4.14.0/lib/base/caml -I /Users/marcelomorales/.opam/4.14.0/lib/base/md5 -I /Users/marcelomorales/.opam/4.14.0/lib/base/shadow_stdlib -I /Users/marcelomorales/.opam/4.14.0/lib/base_bigstring -I /Users/marcelomorales/.opam/4.14.0/lib/base_quickcheck -I /Users/marcelomorales/.opam/4.14.0/lib/base_quickcheck/ppx_quickcheck/runtime -I /Users/marcelomorales/.opam/4.14.0/lib/bigarray-compat -I /Users/marcelomorales/.opam/4.14.0/lib/bin_prot -I /Users/marcelomorales/.opam/4.14.0/lib/bin_prot/shape -I /Users/marcelomorales/.opam/4.14.0/lib/camlzip -I /Users/marcelomorales/.opam/4.14.0/lib/core -I /Users/marcelomorales/.opam/4.14.0/lib/core/base_for_tests -I /Users/marcelomorales/.opam/4.14.0/lib/core/validate -I /Users/marcelomorales/.opam/4.14.0/lib/core_kernel/caml_threads -I /Users/marcelomorales/.opam/4.14.0/lib/core_kernel/caml_unix -I /Users/marcelomorales/.opam/4.14.0/lib/core_kernel/flags -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix/error_checking_mutex -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix/signal_unix -I /Users/marcelomorales/.opam/4.14.0/lib/core_unix/sys_unix -I /Users/marcelomorales/.opam/4.14.0/lib/ctypes -I /Users/marcelomorales/.opam/4.14.0/lib/fieldslib -I /Users/marcelomorales/.opam/4.14.0/lib/int_repr -I /Users/marcelomorales/.opam/4.14.0/lib/integers -I /Users/marcelomorales/.opam/4.14.0/lib/jane-street-headers -I /Users/marcelomorales/.opam/4.14.0/lib/npy -I /Users/marcelomorales/.opam/4.14.0/lib/ocaml/threads -I /Users/marcelomorales/.opam/4.14.0/lib/parsexp -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_assert/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_bench/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_compare/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_enumerate/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/collector -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/common -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/config -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_expect/config_types -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_hash/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_here/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_inline_test/config -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_inline_test/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_log/types -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_module_timer/runtime -I /Users/marcelomorales/.opam/4.14.0/lib/ppx_sexp_conv/runtime-lib -I /Users/marcelomorales/.opam/4.14.0/lib/sexplib -I /Users/marcelomorales/.opam/4.14.0/lib/sexplib/unix -I /Users/marcelomorales/.opam/4.14.0/lib/sexplib0 -I /Users/marcelomorales/.opam/4.14.0/lib/spawn -I /Users/marcelomorales/.opam/4.14.0/lib/splittable_random -I /Users/marcelomorales/.opam/4.14.0/lib/stdio -I /Users/marcelomorales/.opam/4.14.0/lib/stdlib-shims -I /Users/marcelomorales/.opam/4.14.0/lib/time_now -I /Users/marcelomorales/.opam/4.14.0/lib/torch -I /Users/marcelomorales/.opam/4.14.0/lib/torch/core -I /Users/marcelomorales/.opam/4.14.0/lib/typerep -I /Users/marcelomorales/.opam/4.14.0/lib/variantslib -I /Users/marcelomorales/.opam/4.14.0/lib/zip -no-alias-deps -opaque -o backend/src/.readfile.objs/byte/readfile.cmo -c -impl backend/src/readfile.ml)
-> File "backend/src/readfile.ml", line 8, characters 5-10:
-> 8 | open Torch
->          ^^^^^
-> Error: Unbound module Torch
-[2]
+$ (cd _build/default && /home/rawstone/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I backend/tests/.tests.eobjs/byte -I backend/tests/.tests.eobjs/native -I /home/rawstone/.opam/4.14.0/lib/base -I /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types -I /home/rawstone/.opam/4.14.0/lib/base/caml -I /home/rawstone/.opam/4.14.0/lib/base/md5 -I /home/rawstone/.opam/4.14.0/lib/base/shadow_stdlib -I /home/rawstone/.opam/4.14.0/lib/base_bigstring -I /home/rawstone/.opam/4.14.0/lib/base_quickcheck -I /home/rawstone/.opam/4.14.0/lib/base_quickcheck/ppx_quickcheck/runtime -I /home/rawstone/.opam/4.14.0/lib/bigarray-compat -I /home/rawstone/.opam/4.14.0/lib/bin_prot -I /home/rawstone/.opam/4.14.0/lib/bin_prot/shape -I /home/rawstone/.opam/4.14.0/lib/bisect_ppx/common -I /home/rawstone/.opam/4.14.0/lib/bisect_ppx/runtime -I /home/rawstone/.opam/4.14.0/lib/camlzip -I /home/rawstone/.opam/4.14.0/lib/core -I /home/rawstone/.opam/4.14.0/lib/core/base_for_tests -I /home/rawstone/.opam/4.14.0/lib/core/validate -I /home/rawstone/.opam/4.14.0/lib/core_kernel/caml_threads -I /home/rawstone/.opam/4.14.0/lib/core_kernel/caml_unix -I /home/rawstone/.opam/4.14.0/lib/core_kernel/flags -I /home/rawstone/.opam/4.14.0/lib/core_unix -I /home/rawstone/.opam/4.14.0/lib/core_unix/error_checking_mutex -I /home/rawstone/.opam/4.14.0/lib/core_unix/signal_unix -I /home/rawstone/.opam/4.14.0/lib/core_unix/sys_unix -I /home/rawstone/.opam/4.14.0/lib/ctypes -I /home/rawstone/.opam/4.14.0/lib/fieldslib -I /home/rawstone/.opam/4.14.0/lib/int_repr -I /home/rawstone/.opam/4.14.0/lib/integers -I /home/rawstone/.opam/4.14.0/lib/jane-street-headers -I /home/rawstone/.opam/4.14.0/lib/npy -I /home/rawstone/.opam/4.14.0/lib/ocaml/threads -I /home/rawstone/.opam/4.14.0/lib/ounit2 -I /home/rawstone/.opam/4.14.0/lib/ounit2/advanced -I /home/rawstone/.opam/4.14.0/lib/parsexp -I /home/rawstone/.opam/4.14.0/lib/ppx_assert/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_bench/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_compare/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_enumerate/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_expect/collector -I /home/rawstone/.opam/4.14.0/lib/ppx_expect/common -I /home/rawstone/.opam/4.14.0/lib/ppx_expect/config -I /home/rawstone/.opam/4.14.0/lib/ppx_expect/config_types -I /home/rawstone/.opam/4.14.0/lib/ppx_hash/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_here/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_inline_test/config -I /home/rawstone/.opam/4.14.0/lib/ppx_inline_test/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/ppx_log/types -I /home/rawstone/.opam/4.14.0/lib/ppx_module_timer/runtime -I /home/rawstone/.opam/4.14.0/lib/ppx_sexp_conv/runtime-lib -I /home/rawstone/.opam/4.14.0/lib/seq -I /home/rawstone/.opam/4.14.0/lib/sexplib -I /home/rawstone/.opam/4.14.0/lib/sexplib/unix -I /home/rawstone/.opam/4.14.0/lib/sexplib0 -I /home/rawstone/.opam/4.14.0/lib/spawn -I /home/rawstone/.opam/4.14.0/lib/splittable_random -I /home/rawstone/.opam/4.14.0/lib/stdio -I /home/rawstone/.opam/4.14.0/lib/stdlib-shims -I /home/rawstone/.opam/4.14.0/lib/time_now -I /home/rawstone/.opam/4.14.0/lib/torch -I /home/rawstone/.opam/4.14.0/lib/torch/core -I /home/rawstone/.opam/4.14.0/lib/typerep -I /home/rawstone/.opam/4.14.0/lib/variantslib -I /home/rawstone/.opam/4.14.0/lib/zip -I backend/src/.predict_conv.objs/byte -I backend/src/.predict_conv.objs/native -I backend/src/.readfile.objs/byte -I backend/src/.readfile.objs/native -intf-suffix .ml -no-alias-deps -opaque -o backend/tests/.tests.eobjs/native/dune__exe__Tests.cmx -c -impl backend/tests/tests.ml)
+$ (cd _build/default && /home/rawstone/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o backend/tests/tests.exe /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types/base_internalhash_types.cmxa -I /home/rawstone/.opam/4.14.0/lib/base/base_internalhash_types /home/rawstone/.opam/4.14.0/lib/base/caml/caml.cmxa /home/rawstone/.opam/4.14.0/lib/sexplib0/sexplib0.cmxa /home/rawstone/.opam/4.14.0/lib/base/shadow_stdlib/shadow_stdlib.cmxa /home/rawstone/.opam/4.14.0/lib/base/base.cmxa -I /home/rawstone/.opam/4.14.0/lib/base /home/rawstone/.opam/4.14.0/lib/ppx_sexp_conv/runtime-lib/ppx_sexp_conv_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_compare/runtime-lib/ppx_compare_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_enumerate/runtime-lib/ppx_enumerate_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_hash/runtime-lib/ppx_hash_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_here/runtime-lib/ppx_here_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_assert/runtime-lib/ppx_assert_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_bench/runtime-lib/ppx_bench_lib.cmxa /home/rawstone/.opam/4.14.0/lib/base/md5/md5_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ocaml/unix.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/ocaml/bigarray.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/fieldslib/fieldslib.cmxa /home/rawstone/.opam/4.14.0/lib/variantslib/variantslib.cmxa /home/rawstone/.opam/4.14.0/lib/bin_prot/shape/bin_shape_lib.cmxa /home/rawstone/.opam/4.14.0/lib/bin_prot/bin_prot.cmxa -I /home/rawstone/.opam/4.14.0/lib/bin_prot /home/rawstone/.opam/4.14.0/lib/ppx_inline_test/config/inline_test_config.cmxa /home/rawstone/.opam/4.14.0/lib/jane-street-headers/jane_street_headers.cmxa /home/rawstone/.opam/4.14.0/lib/time_now/time_now.cmxa -I /home/rawstone/.opam/4.14.0/lib/time_now /home/rawstone/.opam/4.14.0/lib/ppx_inline_test/runtime-lib/ppx_inline_test_lib.cmxa /home/rawstone/.opam/4.14.0/lib/stdio/stdio.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_module_timer/runtime/ppx_module_timer_runtime.cmxa /home/rawstone/.opam/4.14.0/lib/typerep/typerep_lib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_expect/common/expect_test_common.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_expect/config_types/expect_test_config_types.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_expect/collector/expect_test_collector.cmxa -I /home/rawstone/.opam/4.14.0/lib/ppx_expect/collector /home/rawstone/.opam/4.14.0/lib/ppx_expect/config/expect_test_config.cmxa /home/rawstone/.opam/4.14.0/lib/parsexp/parsexp.cmxa /home/rawstone/.opam/4.14.0/lib/sexplib/sexplib.cmxa /home/rawstone/.opam/4.14.0/lib/ppx_log/types/ppx_log_types.cmxa /home/rawstone/.opam/4.14.0/lib/splittable_random/splittable_random.cmxa /home/rawstone/.opam/4.14.0/lib/base_quickcheck/base_quickcheck.cmxa /home/rawstone/.opam/4.14.0/lib/base_quickcheck/ppx_quickcheck/runtime/ppx_quickcheck_runtime.cmxa /home/rawstone/.opam/4.14.0/lib/int_repr/int_repr.cmxa /home/rawstone/.opam/4.14.0/lib/base_bigstring/base_bigstring.cmxa -I /home/rawstone/.opam/4.14.0/lib/base_bigstring /home/rawstone/.opam/4.14.0/lib/core/base_for_tests/base_for_tests.cmxa /home/rawstone/.opam/4.14.0/lib/core/validate/validate.cmxa /home/rawstone/.opam/4.14.0/lib/core/core.cmxa -I /home/rawstone/.opam/4.14.0/lib/core -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/stdlib-shims/stdlib_shims.cmxa /home/rawstone/.opam/4.14.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/rawstone/.opam/4.14.0/lib/ounit2/oUnit.cmxa /home/rawstone/.opam/4.14.0/lib/ocaml/threads/threads.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/bigarray-compat/bigarray_compat.cmxa /home/rawstone/.opam/4.14.0/lib/integers/integers.cmxa -I /home/rawstone/.opam/4.14.0/lib/integers /home/rawstone/.opam/4.14.0/lib/ctypes/ctypes.cmxa -I /home/rawstone/.opam/4.14.0/lib/ctypes /home/rawstone/.opam/4.14.0/lib/ctypes/ctypes-foreign.cmxa -I /home/rawstone/.opam/4.14.0/lib/ctypes /home/rawstone/.opam/4.14.0/lib/ocaml/str.cmxa -I /home/rawstone/.opam/4.14.0/lib/ocaml /home/rawstone/.opam/4.14.0/lib/ctypes/cstubs.cmxa -I /home/rawstone/.opam/4.14.0/lib/ctypes /home/rawstone/.opam/4.14.0/lib/torch/core/torch_core.cmxa -I /home/rawstone/.opam/4.14.0/lib/torch/core /home/rawstone/.opam/4.14.0/lib/torch/torch.cmxa /home/rawstone/.opam/4.14.0/lib/zip/zip.cmxa -I /home/rawstone/.opam/4.14.0/lib/zip /home/rawstone/.opam/4.14.0/lib/npy/npy.cmxa /home/rawstone/.opam/4.14.0/lib/core_kernel/caml_threads/caml_threads.cmxa /home/rawstone/.opam/4.14.0/lib/core_unix/error_checking_mutex/error_checking_mutex.cmxa -I /home/rawstone/.opam/4.14.0/lib/core_unix/error_checking_mutex /home/rawstone/.opam/4.14.0/lib/core_kernel/flags/flags.cmxa /home/rawstone/.opam/4.14.0/lib/sexplib/unix/sexplib_unix.cmxa /home/rawstone/.opam/4.14.0/lib/core_kernel/caml_unix/caml_unix.cmxa /home/rawstone/.opam/4.14.0/lib/core_unix/signal_unix/signal_unix.cmxa -I /home/rawstone/.opam/4.14.0/lib/core_unix/signal_unix /home/rawstone/.opam/4.14.0/lib/spawn/spawn.cmxa -I /home/rawstone/.opam/4.14.0/lib/spawn /home/rawstone/.opam/4.14.0/lib/core_unix/core_unix.cmxa -I /home/rawstone/.opam/4.14.0/lib/core_unix /home/rawstone/.opam/4.14.0/lib/core_unix/sys_unix/sys_unix.cmxa -I /home/rawstone/.opam/4.14.0/lib/core_unix/sys_unix backend/src/readfile.cmxa /home/rawstone/.opam/4.14.0/lib/bisect_ppx/common/bisect_common.cmxa /home/rawstone/.opam/4.14.0/lib/bisect_ppx/runtime/bisect.cmxa backend/src/predict_conv.cmxa backend/tests/.tests.eobjs/native/dune__exe__Tests.cmx)
+$ (cd _build/default/backend/tests && ./tests.exe)
+> /mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/_build/default/backend/tests
+> .
+> Ran: 1 tests in: 0.37 seconds.
+> OK
