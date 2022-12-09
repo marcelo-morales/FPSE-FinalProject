@@ -1,4 +1,0 @@
-(lang dune 3.4)
-(name numerade)
-(sections (lib .))
-(files (lib (META dune-package opam)))
