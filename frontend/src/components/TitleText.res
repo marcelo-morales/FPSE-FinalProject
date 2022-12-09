@@ -4,7 +4,7 @@ let make = () => {
     <button
       className="font-serif text-xl font-medium mr-4"
       onClick={_evt => RescriptReactRouter.push("/")}>
-      {React.string("TradeML")}
+      {React.string("Numerade")}
     </button>
     <a
       className="w-6 h-6"

@@ -1,7 +1,7 @@
-#Start(1670464555047)
+#Start(1670609789223)
 
   Warning number 44
-  /mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/frontend/src/pages/Home.res:1:1-10
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/pages/Home.res:1:1-10
 
   1 │ open Utils
   2 │ 
@@ -9,4 +9,22 @@
 
   this open statement shadows the module identifier Result (which is later used)
 
-#Done(1670464557187)
+
+  We've found a bug for you!
+  /Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/frontend/src/App.res:24:12-16
+
+  22 ┆   }}
+  23 ┆ 
+  24 ┆   <h2> Hello World</h2>
+  25 ┆ 
+  26 ┆ </div>
+
+  The variant constructor Hello can't be found.
+  
+  - If it's defined in another module or file, bring it into scope by:
+    - Prefixing it with said module name: TheModule.Hello
+    - Or specifying its type: let theValue: TheModule.theType = Hello
+  - Constructors and modules are both capitalized. Did you want the latter?
+    Then instead of let foo = Bar, try module Foo = Bar.
+
+#Done(1670609789433)

@@ -15,18 +15,6 @@ o NumberButton-Frontend.cmi : cp ../bs/src/NumberButton-Frontend.cmi
 o NumberButton-Frontend.cmj : cp ../bs/src/NumberButton-Frontend.cmj
 o NumberButton-Frontend.cmt : cp ../bs/src/NumberButton-Frontend.cmt
 o NumberButton.res : cp ../../src/NumberButton.res
-o Icon-Frontend.cmi : cp ../bs/src/utils/Icon-Frontend.cmi
-o Icon-Frontend.cmj : cp ../bs/src/utils/Icon-Frontend.cmj
-o Icon-Frontend.cmt : cp ../bs/src/utils/Icon-Frontend.cmt
-o Icon.res : cp ../../src/utils/Icon.res
-o Type-Frontend.cmi : cp ../bs/src/utils/Type-Frontend.cmi
-o Type-Frontend.cmj : cp ../bs/src/utils/Type-Frontend.cmj
-o Type-Frontend.cmt : cp ../bs/src/utils/Type-Frontend.cmt
-o Type.res : cp ../../src/utils/Type.res
-o Utils-Frontend.cmi : cp ../bs/src/utils/Utils-Frontend.cmi
-o Utils-Frontend.cmj : cp ../bs/src/utils/Utils-Frontend.cmj
-o Utils-Frontend.cmt : cp ../bs/src/utils/Utils-Frontend.cmt
-o Utils.res : cp ../../src/utils/Utils.res
 o Home-Frontend.cmi : cp ../bs/src/pages/Home-Frontend.cmi
 o Home-Frontend.cmj : cp ../bs/src/pages/Home-Frontend.cmj
 o Home-Frontend.cmt : cp ../bs/src/pages/Home-Frontend.cmt
@@ -51,7 +39,19 @@ o PopupError-Frontend.cmi : cp ../bs/src/components/PopupError-Frontend.cmi
 o PopupError-Frontend.cmj : cp ../bs/src/components/PopupError-Frontend.cmj
 o PopupError-Frontend.cmt : cp ../bs/src/components/PopupError-Frontend.cmt
 o PopupError.res : cp ../../src/components/PopupError.res
+o Icon-Frontend.cmi : cp ../bs/src/utils/Icon-Frontend.cmi
+o Icon-Frontend.cmj : cp ../bs/src/utils/Icon-Frontend.cmj
+o Icon-Frontend.cmt : cp ../bs/src/utils/Icon-Frontend.cmt
+o Icon.res : cp ../../src/utils/Icon.res
+o Type-Frontend.cmi : cp ../bs/src/utils/Type-Frontend.cmi
+o Type-Frontend.cmj : cp ../bs/src/utils/Type-Frontend.cmj
+o Type-Frontend.cmt : cp ../bs/src/utils/Type-Frontend.cmt
+o Type.res : cp ../../src/utils/Type.res
+o Utils-Frontend.cmi : cp ../bs/src/utils/Utils-Frontend.cmi
+o Utils-Frontend.cmj : cp ../bs/src/utils/Utils-Frontend.cmj
+o Utils-Frontend.cmt : cp ../bs/src/utils/Utils-Frontend.cmt
+o Utils.res : cp ../../src/utils/Utils.res
 o Frontend.cmi : cp ../bs/Frontend.cmi
 o Frontend.cmj : cp ../bs/Frontend.cmj
 o Frontend.cmt : cp ../bs/Frontend.cmt
-build install.stamp : touch App-Frontend.cmi App-Frontend.cmj Index-Frontend.cmi Index-Frontend.cmj NumberButton-Frontend.cmi NumberButton-Frontend.cmj Icon-Frontend.cmi Icon-Frontend.cmj Type-Frontend.cmi Type-Frontend.cmj Utils-Frontend.cmi Utils-Frontend.cmj Home-Frontend.cmi Home-Frontend.cmj Result-Frontend.cmi Result-Frontend.cmj NotFound-Frontend.cmi NotFound-Frontend.cmj Header-Frontend.cmi Header-Frontend.cmj TitleText-Frontend.cmi TitleText-Frontend.cmj PopupError-Frontend.cmi PopupError-Frontend.cmj Frontend.cmi Frontend.cmj
+build install.stamp : touch App-Frontend.cmi App-Frontend.cmj Index-Frontend.cmi Index-Frontend.cmj NumberButton-Frontend.cmi NumberButton-Frontend.cmj Home-Frontend.cmi Home-Frontend.cmj Result-Frontend.cmi Result-Frontend.cmj NotFound-Frontend.cmi NotFound-Frontend.cmj Header-Frontend.cmi Header-Frontend.cmj TitleText-Frontend.cmi TitleText-Frontend.cmj PopupError-Frontend.cmi PopupError-Frontend.cmj Icon-Frontend.cmi Icon-Frontend.cmj Type-Frontend.cmi Type-Frontend.cmj Utils-Frontend.cmi Utils-Frontend.cmj Frontend.cmi Frontend.cmj
