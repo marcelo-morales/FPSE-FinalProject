@@ -2,8 +2,8 @@
 
 @react.component
 let make = () => {
-  let (loading, setLoading) = React.useState(_ => false)
-  let (hasError, setHasError) = React.useState(_ => false)
+  // let (loading, setLoading) = React.useState(_ => false)
+  // let (hasError, setHasError) = React.useState(_ => false)
 
 //   React.useEffect2(() => {
 //     open Promise
@@ -17,11 +17,10 @@ let make = () => {
       <Header />
       {switch url.path {
       | list{"result"} => <Result />
-      | list{} => <Home loading setLoading hasError setHasError  />
+      | list{} => <Home />
       | _ => <NotFound />
       }}
 
-      <h2> Hello World</h2>
 
     </div>
   </div>

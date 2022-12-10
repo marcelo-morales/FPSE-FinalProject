@@ -8,25 +8,14 @@ import * as NotFound$Frontend from "./pages/NotFound.bs.js";
 import * as RescriptReactRouter from "@rescript/react/src/RescriptReactRouter.bs.js";
 
 function App(Props) {
-  var match = React.useState(function () {
-        return false;
-      });
-  var match$1 = React.useState(function () {
-        return false;
-      });
   var url = RescriptReactRouter.useUrl(undefined, undefined);
-  var match$2 = url.path;
+  var match = url.path;
   var tmp;
-  tmp = match$2 ? (
-      match$2.hd === "result" ? (
-          match$2.tl ? React.createElement(NotFound$Frontend.make, {}) : React.createElement(Result$Frontend.make, {})
+  tmp = match ? (
+      match.hd === "result" ? (
+          match.tl ? React.createElement(NotFound$Frontend.make, {}) : React.createElement(Result$Frontend.make, {})
         ) : React.createElement(NotFound$Frontend.make, {})
-    ) : React.createElement(Home$Frontend.make, {
-          loading: match[0],
-          setLoading: match[1],
-          hasError: match$1[0],
-          setHasError: match$1[1]
-        });
+    ) : React.createElement(Home$Frontend.make, {});
   return React.createElement("div", {
               className: "w-screen h-screen flex flex-row justify-center"
             }, React.createElement("div", {
