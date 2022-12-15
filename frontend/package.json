@@ -6,18 +6,19 @@
     "dependencies": {
         "@rescript/react": "0.10.3",
         "@ryyppy/rescript-promise": "^2.1.0",
-        "esy": "^0.6.12",
-        "ocaml": "4.10.x",
-        "react": "17.0.2",
-        "react-dom": "17.0.2",
         "@vitejs/plugin-react-refresh": "1.3.3",
         "autoprefixer": "^10.4.0",
+        "bootstrap": "^5.2.3",
         "cross-env": "7.0.3",
+        "esy": "^0.6.12",
+        "ocaml": "4.10.x",
         "postcss": "^8.4.5",
         "prettier": "2.3.1",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
         "rescript": "9.1.4",
-        "tailwindcss": "^3.0.2",
-        "vite": "2.3.7"
+        "roughjs": "^4.5.2",
+        "tailwindcss": "^3.0.2"
     },
     "scripts": {
         "build": "rescript build",
@@ -37,7 +38,6 @@
         "prettier": "2.3.1",
         "rescript": "9.1.4",
         "tailwindcss": "^3.0.2",
-        "vite": "2.3.7"
+        "vite": "^2.9.15"
     }
-    
 }
