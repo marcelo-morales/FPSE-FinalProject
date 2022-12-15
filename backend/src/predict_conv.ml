@@ -18,6 +18,7 @@ let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
   
   let t2 =  Array.of_list mylist2 |> Tensor.of_float1 in
   
+
   
 
   (* This should reach ~99% accuracy. *)
@@ -55,10 +56,12 @@ let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
 
 
 
+
 let predictImageFromArray (matrix : 'a array ) (weigths_name : string ) =
  
   let t2 = Tensor.of_float1 matrix in
 
+  
 
   (* This should reach ~99% accuracy. *)
   let batch_size = 256 in
