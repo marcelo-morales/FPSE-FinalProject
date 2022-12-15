@@ -35,6 +35,11 @@
   (modules train_conv)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
+(executable
+  (name graphicstest)
+  (modules graphicstest)
+  (libraries graphics threads))
+
 (library
   (name predict_conv)
   (modules predict_conv)
