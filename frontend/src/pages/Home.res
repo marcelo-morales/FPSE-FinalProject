@@ -56,12 +56,12 @@ let make = (
 
       <button style=
       {ReactDOM.Style.make(~color="red",  
-       ~position="absolute",
-      ~bottom="0",
-       ~borderRadius="20px",
-       ~fontSize="120px",
-       ~margin="500px 550px",
-       ~padding="10px 60px",
+      ~bottom="5%",
+      ~left="5%",
+       ~borderRadius="5%",
+       ~fontSize="200%",
+       ~margin="5% 2.5%",
+       ~padding="5% 5%",
        ~backgroundColor="lightblue",
       ())}
       
@@ -74,14 +74,12 @@ let make = (
       
       <button style=
       {ReactDOM.Style.make(~color="red",  
-      ~position="absolute",
-      ~bottom="0",
-      ~marginLeft="40px",
-      ~marginRight="40px",
-       ~borderRadius="20px",
-       ~fontSize="120px",
-       ~margin="500px 550px",
-       ~padding="10px 60px",
+      ~bottom="5%",
+      ~left="5%",
+       ~borderRadius="5%",
+       ~fontSize="200%",
+       ~margin="5% 2.5%",
+       ~padding="5% 5%",
        ~backgroundColor="lightblue",
       ())}>  {"x"->React.string} </button>
 
@@ -92,46 +90,51 @@ let make = (
 
       <button style=
       {ReactDOM.Style.make(~color="red",  
-       ~position="absolute",
-      ~bottom="0",
-       ~borderRadius="20px",
-       ~fontSize="120px",
-       ~margin="200px 50px",
-       ~padding="10px 60px",
+       ~bottom="5%",
+      ~left="5%",
+       ~borderRadius="5%",
+       ~fontSize="200%",
+       ~margin="5% 2.5%",
+       ~padding="5% 5%",
        ~backgroundColor="lightblue",
       ())}> {"-"->React.string} </button>
 
       <button style=
       {ReactDOM.Style.make(~color="red",  
-       ~position="absolute",
-      ~bottom="0",
-       ~borderRadius="20px",
-       ~fontSize="120px",
-       ~margin="200px 550px",
-       ~padding="10px 60px",
+     ~bottom="5%",
+      ~left="5%",
+       ~borderRadius="5%",
+       ~fontSize="200%",
+       ~margin="5% 2.5%",
+       ~padding="5% 5%",
        ~backgroundColor="lightblue",
       ())}> {"/"->React.string} </button>
+
+         <button style=
+      {ReactDOM.Style.make(~color="red",  
+       ~bottom="2.5%",
+      ~left="5%",
+       ~borderRadius="5%",
+       ~fontSize="200%",
+       ~margin="5% 2.5%",
+       ~padding="5% 5%",
+       ~backgroundColor="pink",
+      ())}> {"="->React.string} </button>
+
+      <button style=
+      {ReactDOM.Style.make(~color="red",  
+     ~bottom="2.5%",
+      ~left="5%",
+       ~borderRadius="5%",
+       ~fontSize="200%",
+       ~margin="5% 2.5%",
+       ~padding="5% 5%",
+       ~backgroundColor="lightgreen",
+      ())}> {"Erase"->React.string} </button>
 
               
     </div>
 
-   <div className="h-8 mt-2 px-6 w-full flex items-center">
-
-       <button style=
-      {ReactDOM.Style.make(~color="red",  
-       ~position="absolute",
-      ~bottom="0",
-       ~right="100",
-       ~borderRadius="20px",
-       ~fontSize="120px",
-       ~margin="300px 800px",
-       ~padding="10px 60px",
-       ~backgroundColor="pink",
-      ())} > {"="->React.string} </button>
-    
-
-        
-    </div>
   
   </div>
 }
