@@ -1,17 +1,15 @@
 [@@@warning "-27"]
 
-(* open Core
-open Lib *)
-(* open Array *)
+open Core
 
-(* let () =
-  Dream.run (fun _ ->
-    Dream.html "Good morningg, Christian! I got this to work! Lets create a cool project") *)
+
 
     type error_response =
     { msg : string
     ; code : int
     }
+    (* pixel represented in canvas *)
+    type pixel = {x : int; y : int}
   [@@deriving yojson]
 
 (*
@@ -19,42 +17,46 @@ open Lib *)
   localhost:8080/
 *)
 let welcome : Dream.route =
-  Dream.get "/" (fun request -> Dream.html "Welcome to numerade")
+  Dream.get "/" (fun request -> Dream.html "Welcome to Numerade")
 ;;
     
 (*
+get result, callback, instead of responding with html, respondg with a json
   Get result of math operation.
   e.g., localhost:8080/result
 *)
-(* let result : Dream.route =
+
+(*  
+
+   GET localhost:8080/result/? pass in sequence of zeros and ones
+
+   pass in 2d array as query parameter of get request
+
+first_input -> one_2d_array
+second_input -> one_2d_array
+   
+   *)
+let result : Dream.route =
   Dream.get "/result" (fun req ->
     match Dream.all_queries req with
-    | [ ("nums", nums); ("ops", ops) ] ->
-      let numsArray, operations = float array , string array  in
+    | [ ("first_input", first); ("second_input", second); ("operation", operation)] ->
+      let first_param, second_param = pixel first , pixel second  in
+      Math.compute ~input_a:first_param  ~input_b: second_param ~op: operation
+      (* call function to do math
+      want - flattened 1d array
+      [ [ 1 , 2]
+       [3, 4]
+      ]
+
+      [1, 2, 3, 4]
+
+      e.g.    Math.compute ~input_a ~price:!real_price ~transaction_time:timestamp
+      *)
+
       |> Dream.json
            ~status:(Dream.int_to_status 200)
            ~headers:[ "Access-Control-Allow-Origin", "*" ]
     | _ ->
       Dream.json ~status:`Bad_Request ~headers:[ "Access-Control-Allow-Origin", "*" ] "")
-;; *)
-
-(* Template for catching error statuses and forwarding errors to the client *)
-(* let my_error_template debug_info suggested_response =
-  let status = Dream.status suggested_response in
-  let code = Dream.status_to_int status
-  and msg = Dream.status_to_string status in
-  suggested_response
-  |> Dream.with_header "Content-Type" Dream.application_json
-  |> Dream.with_header "Access-Control-Allow-Origin" "*"
-  |> Dream.with_body @@ Yojson.Safe.to_string @@ error_response_to_yojson { msg; code }
-  |> Lwt.return
 ;;
-
-let () =
-  Dream.run ~error_handler:(Dream.error_template my_error_template)
-  @@ Dream.logger
-  @@ Dream.memory_sessions
-  @@ Dream.router [ welcome; result ]
-  @@ Dream.not_found
-;; *)
 
