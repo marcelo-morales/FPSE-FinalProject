@@ -44,6 +44,12 @@
   (preprocess (pps bisect_ppx))
   )
 
+(executable
+  (name extradigit)
+  (modules extradigit)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile)
+  (preprocess (pps bisect_ppx))
+  )
 
 
 (data_only_dirs lib node_modules)
