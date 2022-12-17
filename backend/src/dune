@@ -44,7 +44,7 @@
   (preprocess (pps bisect_ppx))
   )
 
-(executable
+(library
   (name extradigit)
   (modules extradigit)
   (libraries core torch npy core_unix core_unix.sys_unix readfile)
