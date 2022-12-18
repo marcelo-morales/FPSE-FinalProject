@@ -204,27 +204,59 @@ function App() {
     setOperation("add")
     countNumPixels();
     buttonPressed= true;
+
+    const canvas = document.getElementById("canvas");
+    if (canvas) {
+      const context = canvas.getContext('2d');
+      context.clearRect(0, 0, 28*10, 28*10);
+    }
   }
 
   const startMathSubtract = () => {
     setOperation("subtract")
     countNumPixels();
     buttonPressed= true;
+
+    const canvas = document.getElementById("canvas");
+    if (canvas) {
+      const context = canvas.getContext('2d');
+      context.clearRect(0, 0, 28*10, 28*10);
+    }
   }
 
   const startMathMultiply = () => {
     setOperation("multiply")
     countNumPixels();
     buttonPressed= true;
+
+    const canvas = document.getElementById("canvas");
+    if (canvas) {
+      const context = canvas.getContext('2d');
+      context.clearRect(0, 0, 28*10, 28*10);
+    }
   }
 
   const startMathDivide = () => {
     setOperation("divide")
     countNumPixels();
     buttonPressed= true;
+
+    const canvas = document.getElementById("canvas");
+    if (canvas) {
+      const context = canvas.getContext('2d');
+      context.clearRect(0, 0, 28*10,28*10);
+    }
   }
 
   const endMath = () => {
+
+    console.log("this is first array")
+    console.log(firstInput)
+    console.log("this is second array")
+    console.log(secondInput)
+    console.log("this is operation")
+    console.log(operation)
+
     countNumPixels();
 
     //  axios
