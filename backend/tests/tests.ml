@@ -25,15 +25,15 @@ let testarray1 = [|[|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
                    [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]|]
 
 
-let testarray1_after_extract = [[|[|0.; 0.; 0.; 0.|]; [|0.; 1.; 1.; 1.|]; [|0.; 1.; 0.; 1.|];[|0.; 1.; 1.; 1.|]; [|0.; 0.; 0.; 0.|]|];[|[|0.; 0.; 0.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|];[|0.; 0.; 0.|]|]];
+(* let testarray1_after_extract = [[|[|0.; 0.; 0.; 0.|]; [|0.; 1.; 1.; 1.|]; [|0.; 1.; 0.; 1.|];[|0.; 1.; 1.; 1.|]; [|0.; 0.; 0.; 0.|]|];[|[|0.; 0.; 0.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|];[|0.; 0.; 0.|]|]]; *)
   
 
 
 (* let () = print_array (List.nth_exn testarray1_after_extract 0) 4 5 *)
 
-let test_2darray = Array.make_matrix ~dimx:28 ~dimy:28 0.0
+(* let test_2darray = Array.make_matrix ~dimx:28 ~dimy:28 0.0 *)
 
-testarray1_after_extract
+(* testarray1_after_extract *)
 
 
 let image_name_and_path_for_one = "../../../../backend/tests/handwrittenImageOfOne.txt"
@@ -54,7 +54,7 @@ let () = print_array heyo 27 27
 (* heyo *)
 let prediction1 = (predictImageFromFileName image_name_and_path_for_one weights_name_and_path)
 let prediction2 = (predictImageFrom1DArray imagearray weights_name_and_path)
-let prediction3 = (predictImageFrom2DArray test_2darray weights_name_and_path )
+(* let prediction3 = (predictImageFrom2DArray test_2darray weights_name_and_path ) *)
 
 let prediction_of_four = (predictImageFromFileName image_name_and_path_for_four weights_name_and_path)
 
@@ -69,8 +69,8 @@ let () = printf "%i" prediction_of_four *)
 let miscellaneous_tests _ =
   assert_equal 1 prediction1;
   assert_equal 1 prediction2;
-  assert_equal 1 prediction3;
-  assert_equal testarray1_after_extract (extractimages testarray1);
+  (* assert_equal 1 prediction3; *)
+  (* assert_equal testarray1_after_extract (extractimages testarray1); *)
   assert_equal 4 prediction_of_four
 
 
