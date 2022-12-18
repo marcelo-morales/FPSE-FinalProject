@@ -8,6 +8,8 @@
     predict_conv
     core_unix
     core_unix.sys_unix
+    extradigit
+
 
     )
     

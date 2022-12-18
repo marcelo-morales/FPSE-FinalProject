@@ -10,15 +10,7 @@ open Readfile
 
 
 
-
-
-let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
-  let mylist = strings_from_file image_name |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat in
-  let mylist2 = List.map mylist ~f:(fun x -> try float_of_string x with _ -> failwith x )  in
-  
-  let t2 =  Array.of_list mylist2 |> Tensor.of_float1 in
-
-
+let conv_neural_network (t2 : Tensor.t) (weigths_name : string ) =
   (* This should reach ~99% accuracy. *)
   let batch_size = 256 in
   let epochs = 100 in
@@ -43,17 +35,41 @@ let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
     |> Tensor.dropout ~p:0.5 ~is_training
     |> Layer.forward linear2 in
 
+    let test_model = model ~is_training:false   in
 
-  let test_model = model ~is_training:false   in
+    let () = Serialize.load_multi_ ~named_tensors:(Var_store.all_vars vs) ~filename:weigths_name in
+  
+    let test_accuracy_on_image  =
+      Tensor.(argmax ~dim:(-1)  (test_model (Tensor.unsqueeze t2 ~dim:0 ))) |> Tensor.to_float0_exn in
+      int_of_float test_accuracy_on_image
 
-  let () = Serialize.load_multi_ ~named_tensors:(Var_store.all_vars vs) ~filename:weigths_name in
 
-  let test_accuracy_on_image  =
-    Tensor.(argmax ~dim:(-1)  (test_model (Tensor.unsqueeze t2 ~dim:0 ))) |> Tensor.to_float0_exn in
-    int_of_float test_accuracy_on_image
 
+let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
+  let mylist = strings_from_file image_name |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat in
+  let mylist2 = List.map mylist ~f:(fun x -> try float_of_string x with _ -> failwith x )  in
+  
 
     
-(* let () = printf "\nNeural Network predicts: %i \n" (predictImageFromFileName "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/src/handwrittenImageOfOne.txt" "/mnt/c/Users/Rawstone/OneDrive/Dokumenter/Skole/Universitet/5Semester/FunctionalProgramming/FPSE-FinalProject/src/weights" )  ExampleTest *)
+  let t2 =  Array.of_list mylist2 |> Tensor.of_float1 in
+  
+
+  (* This should reach ~99% accuracy. *)
+  conv_neural_network t2 weigths_name
 
 
+
+let predictImageFrom1DArray (matrix : 'a array ) (weigths_name : string ) =
+  let t2 = Tensor.of_float1 matrix in
+
+  conv_neural_network t2 weigths_name
+
+
+
+let predictImageFrom2DArray (matrix : float array array ) (weigths_name : string ) =
+
+  let t2 = Tensor.of_float1 (Array.concat (Array.to_list matrix)) in
+
+  
+  (* This should reach ~99% accuracy. *)
+  conv_neural_network t2 weigths_name
