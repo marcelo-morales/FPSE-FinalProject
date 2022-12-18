@@ -254,6 +254,8 @@ function App() {
     }
   }
 
+
+  // end math
   const  endMath = async () => {
 
     console.log("this is first array")
@@ -292,8 +294,8 @@ function App() {
       <canvas
         id="canvas"
         className="App"
-        width={28*10}
-        height={28*10}
+        width={28}
+        height={28}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
