@@ -35,10 +35,11 @@ let remove_first_character str =
 let apply_remove_first ls =
   List.map ls ~f:(fun x -> remove_first_character x)
 
+let change_to_float ls =
+  List.map ls ~f:(fun x -> Float.of_string x)
 
 let make_biglist ls =
-  List.fold ls ~init:[] ~f:(fun accum x -> accum @ [(String.split_on_chars x ~on:[' '])] )
-
+  List.fold ls ~init:[] ~f:(fun accum x -> accum @ [(change_to_float (String.split_on_chars x ~on:[' ']))] )
 
 
 
@@ -47,23 +48,26 @@ let make_2d_array ls =
 
 
 
-let print_array theArray =
+
+
+
+(* let print_array_string theArray =
   for i=0 to 27 do
     print_endline "";
     for j=0 to 27 do
       (* printf "%s" (string_of_float theArray.(i).(j)); *)
       printf "%s " (theArray.(j).(i))
     done
-  done;;
-
-(* let print_array theArray =
-  for i=0 to 27 do
-    print_endline "";
-    for j=0 to 27 do
-      (* printf "%s" (string_of_float theArray.(i).(j)); *)
-      printf "%s" (sprintf "%.0f " theArray.(j).(i))
-    done
   done;; *)
+
+let print_array  theArray dim1 dim2 =
+  for i=0 to dim1 do
+    print_endline "";
+    for j=0 to dim2 do
+      (* printf "%s" (string_of_float theArray.(i).(j)); *)
+      printf "%s" (sprintf "%.0f " theArray.(i).(j))
+    done
+  done;;
   
 
 

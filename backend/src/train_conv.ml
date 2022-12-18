@@ -11,9 +11,9 @@ open Readfile
 
 let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat ;;
 
-let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;; 
+(* let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;;  *)
 
-let t2 =  Array.of_list mylist2 |> Tensor.of_float1 ;;
+let t2 =  Array.of_list mylist |> Tensor.of_float1 ;;
 
 (* This should reach ~99% accuracy. *)
 let batch_size = 256

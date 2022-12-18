@@ -47,9 +47,9 @@ let conv_neural_network (t2 : Tensor.t) (weigths_name : string ) =
 
 let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
   let mylist = strings_from_file image_name |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat in
-  let mylist2 = List.map mylist ~f:(fun x -> try float_of_string x with _ -> failwith x )  in
+  (* let mylist2 = List.map mylist ~f:(fun x -> try float_of_string x with _ -> failwith x )  in *)
   
-  let t2 =  Array.of_list mylist2 |> Tensor.of_float1 in
+  let t2 =  Array.of_list mylist |> Tensor.of_float1 in
   
 
   (* This should reach ~99% accuracy. *)
