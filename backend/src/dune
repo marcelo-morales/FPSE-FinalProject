@@ -1,14 +1,3 @@
-; (library
-;  (name lib)
-;  (modules lib)
-;  (libraries
-;   core
-;   torch
-;   yojson
-;   ppx_deriving_yojson.runtime
-;   )
-;  (preprocess
-;   (pps ppx_deriving_yojson bisect_ppx)))
 
 (library
  (name server)
@@ -17,7 +6,6 @@
   core
   torch
   yojson
-  lib
   ppx_deriving_yojson.runtime
   dream
   )
