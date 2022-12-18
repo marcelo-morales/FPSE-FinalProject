@@ -44,8 +44,8 @@ let result : Dream.route =
       Math.compute ~input_a:first_param  ~input_b: second_param ~op: operation
       (* call function to do math
       want - flattened 1d array
-      [ [ 1 , 2]
-       [3, 4]
+      [ [ 0 , 1]
+       [0, 1]
       ]
 
       [1, 2, 3, 4]

@@ -1,4 +1,4 @@
-
+type pixel = {x : int; y : int}
 
 @react.component
 let make = () => {
@@ -9,6 +9,12 @@ let make = () => {
 //     open Promise
  
 //   }, (loading, hasError))
+
+// USE A 1d array, start counting pixels from top most left
+
+
+  
+
 
   let url = RescriptReactRouter.useUrl()
 
