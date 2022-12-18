@@ -62,8 +62,7 @@ let predictImageFrom1DArray (matrix : 'a array ) (weigths_name : string ) =
   conv_neural_network t2 weigths_name
 
 
-  (* TODO: finish this *)
-let perforMath (matrix : 'a array ) (matrix : 'a array ) (op: string) = 
+
 
 
 

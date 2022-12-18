@@ -1,14 +1,14 @@
-(library
- (name lib)
- (modules lib)
- (libraries
-  core
-  torch
-  yojson
-  ppx_deriving_yojson.runtime
-  )
- (preprocess
-  (pps ppx_deriving_yojson bisect_ppx)))
+; (library
+;  (name lib)
+;  (modules lib)
+;  (libraries
+;   core
+;   torch
+;   yojson
+;   ppx_deriving_yojson.runtime
+;   )
+;  (preprocess
+;   (pps ppx_deriving_yojson bisect_ppx)))
 
 (library
  (name server)
@@ -43,6 +43,13 @@
   (libraries core torch npy core_unix core_unix.sys_unix readfile)
   (preprocess (pps bisect_ppx))
   )
+
+(library
+(name operate)
+(modules operate)
+(libraries core torch npy core_unix core_unix.sys_unix readfile predict_conv)
+(preprocess (pps bisect_ppx))
+)
 
 (library
   (name extradigit)
