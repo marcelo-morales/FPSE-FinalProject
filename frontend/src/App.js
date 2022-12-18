@@ -5,6 +5,10 @@ import rough from "roughjs/bundled/rough.esm";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import axios from 'axios';
+import Typography from '@mui/material/Typography';
+
+// import { Routes, Route } from "react-router-dom";
+
 
 let buttonPressed = false;
 
@@ -46,6 +50,8 @@ function App() {
   const [firstInput, setFirstInput] = useState([]);
   const [secondInput, setSecondInput] = useState([]);
   const [operation, setOperation] = useState("");
+
+  const [result, setResult] = useState("");
 
 
   useEffect(() => {
@@ -248,7 +254,7 @@ function App() {
     }
   }
 
-  const endMath = () => {
+  const  endMath = async () => {
 
     console.log("this is first array")
     console.log(firstInput)
@@ -259,10 +265,18 @@ function App() {
 
     countNumPixels();
 
-    //  axios
-    // .get(
-    //   `http://localhost:8080/result?num_one=${firstInput}&num_one=${secondInput}&op=${operation}`
-    // )
+    try {
+      const response = await axios
+      .get(
+        `http://localhost:8080/result?num_one=${firstInput}&num_two=${secondInput}&op=${operation}`
+      )
+
+      const data = response.data;
+      const mathResult = data.result;
+      setResult(mathResult);
+    } catch (err) {
+      console.error(err);
+    }
     
 
   }
@@ -271,6 +285,7 @@ function App() {
 
   return (
     <div>
+      
       <div>
         <Swatch setToolType={setToolType} />
       </div>
@@ -301,6 +316,14 @@ function App() {
 
         <Button variant="contained" onClick={() => endMath()}>Equals</Button>
        </Stack>
+
+       <Typography variant="h1" component="h2">
+      The result is {result}
+</Typography>;
+
+
+
+       
 
 
 
