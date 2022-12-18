@@ -252,7 +252,7 @@ let pixelsNotFilledIn = () => {
         switch ret {
         | Ok(_) =>
           // setLoading(_ => false)
-          // setHasError(_ => false)
+          // setHasError(_ => false)e
           resolve()
         | Error(msg) =>
           // setLoading(_ => false)
