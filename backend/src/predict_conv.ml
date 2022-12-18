@@ -8,8 +8,6 @@ open Torch
 open Readfile
 
 
-
-
 let conv_neural_network (t2 : Tensor.t) (weigths_name : string ) =
   (* This should reach ~99% accuracy. *)
   let batch_size = 256 in
@@ -53,9 +51,6 @@ let predictImageFromFileName (image_name : string ) (weigths_name : string ) =
   let t2 =  Array.of_list mylist |> Tensor.of_float1 in
 
 
-
-  
-
   (* This should reach ~99% accuracy. *)
   conv_neural_network t2 weigths_name
 
@@ -65,6 +60,11 @@ let predictImageFrom1DArray (matrix : 'a array ) (weigths_name : string ) =
   let t2 = Tensor.of_float1 matrix in
 
   conv_neural_network t2 weigths_name
+
+
+  (* TODO: finish this *)
+let perforMath (matrix : 'a array ) (matrix : 'a array ) (op: string) = 
+
 
 
 

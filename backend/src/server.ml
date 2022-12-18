@@ -3,7 +3,6 @@
 open Core
 
 
-
     type error_response =
     { msg : string
     ; code : int
@@ -41,18 +40,9 @@ let result : Dream.route =
     match Dream.all_queries req with
     | [ ("first_input", first); ("second_input", second); ("operation", operation)] ->
       let first_param, second_paramm =  Int64.of_string first ,  Int64.of_string second  in
+     
+     (* What function should be called below??? *)
       Math.compute ~input_a:first_param  ~input_b: second_param ~op: operation
-    
-      (* call function to do math
-      want - flattened 1d array
-      [ [ 0 , 1]
-       [0, 1]
-      ]
-
-      [1, 2, 3, 4]
-
-      e.g.    Math.compute ~input_a ~price:!real_price ~transaction_time:timestamp
-      *)
 
       |> Dream.json
            ~status:(Dream.int_to_status 200)
