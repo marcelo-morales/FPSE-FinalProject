@@ -47,6 +47,8 @@ let make_2d_array ls =
   List.to_array @@ List.fold ls ~init:[] ~f:(fun accum elt -> accum @ [List.to_array elt])
 
 
+let load_1d_array name_and_path =
+  strings_from_file name_and_path |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat |> Array.of_list
 
 
 

@@ -11,6 +11,7 @@ open Core
 open Predict_conv
 open Readfile
 open Extradigit
+open Operate
 
 
 
@@ -23,7 +24,6 @@ let testarray1 = [|[|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
                    [|0.0; 0.0; 1.0; 0.0; 1.0; 0.0; 0.0; 1.0; 1.0; 0.0|]; 
                    [|0.0; 0.0; 1.0; 1.0; 1.0; 0.0; 0.0; 1.0; 1.0; 0.0|];
                    [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]|]
-
 
 (* let testarray1_after_extract = [[|[|0.; 0.; 0.; 0.|]; [|0.; 1.; 1.; 1.|]; [|0.; 1.; 0.; 1.|];[|0.; 1.; 1.; 1.|]; [|0.; 0.; 0.; 0.|]|];[|[|0.; 0.; 0.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|];[|0.; 0.; 0.|]|]]; *)
   
@@ -40,18 +40,18 @@ let image_name_and_path_for_one = "../../../../backend/tests/handwrittenImageOfO
 let image_name_and_path_for_four = "../../../../backend/tests/handwrittenImageOfFour.txt"
 let weights_name_and_path = "../../../../backend/tests/weights"
 
+let array1D_of_image_one = load_1d_array image_name_and_path_for_one
+let array1D_of_image_four = load_1d_array image_name_and_path_for_four
 
-let heyo = strings_from_file image_name_and_path_for_one |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> make_2d_array
-
-let eximages = extractimages heyo
+(* let eximages = extractimages array2D_of_image_four
 
 (* let padimg = padimages eximages *)
 
-let () = print_array heyo 27 27
+let () = print_array array2D_of_image_four 27 27 *)
 
 (* let () = List.iter padimg ~f:(fun elt -> print_array elt) *)
  
-(* heyo *)
+
 let prediction1 = (predictImageFromFileName image_name_and_path_for_one weights_name_and_path)
 let prediction2 = (predictImageFrom1DArray imagearray weights_name_and_path)
 (* let prediction3 = (predictImageFrom2DArray test_2darray weights_name_and_path ) *)
@@ -74,9 +74,13 @@ let miscellaneous_tests _ =
   assert_equal 4 prediction_of_four
 
 
+let math_operation_test _ =
+  assert_equal 5.0 (performMath array1D_of_image_four array1D_of_image_one "+" weights_name_and_path) 
+
 
 let ml_tests =
-  "Part 1" >: test_list [ "miscellaneous_ml_tests" >:: miscellaneous_tests ]
+  "Part 1" >: test_list 
+  [ "miscellaneous_ml_tests" >:: miscellaneous_tests; ]
 
  let series = "FinalProject Tests" >::: [ ml_tests ]
 let () = run_test_tt_main series
