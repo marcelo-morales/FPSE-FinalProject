@@ -191,7 +191,7 @@ function App() {
 
       for (let i = 0; i < finalDataArray.length; ++i) {
         if (finalDataArray[i] !== 0) {
-          finalDataArray[i] = 1;
+          finalDataArray[i] = 1.0;
         }
       }
 
@@ -284,15 +284,14 @@ function App() {
   }
 
 
-
-
-
   return (
+  
     <div>
       
       <div>
         <Swatch setToolType={setToolType} />
       </div>
+
       <canvas
         id="canvas"
         className="App"
@@ -301,35 +300,42 @@ function App() {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        // style={border: '1px solid #000'}
       >
         Canvas
       </canvas>
 
-      <Stack spacing={2} direction="row">
+      <Stack spacing={4} direction="row" paddingTop={4}>
         <Button variant="contained" onClick={() => startMathAdd()} >Addition</Button>
-        <Button variant="contained" onclick={() => startMathSubtract()}>Subtraction</Button>
+        <Button variant="contained" onClick={() => startMathSubtract()}>Subtraction</Button>
+        <Typography variant="h1" gutterBottom align="center" paddingRight={20} color="#d31900"
+    fontWeight= "bold">
+        Welcome to Numerade !
+      </Typography>
        </Stack>
 
-       <Stack spacing={2} direction="row">
-       <Button variant="contained" onclick={() => startMathMultiply()} >Multiplication</Button>
-        <Button variant="contained" onclick={() => startMathDivide()} >Division</Button>
+       <Stack spacing={6} direction="row"  paddingTop={4}>
+       <Button variant="contained" onClick={() => startMathMultiply()} >Multiplication</Button>
+        <Button variant="contained" onClick={() => startMathDivide()} >Division</Button>
        </Stack>
 
-       <Stack spacing={2} direction="row">
+       <Stack spacing={4} direction="row"  paddingTop={4}>
 
         <Button variant="contained" onClick={() => endMath()}>Equals</Button>
        </Stack>
 
-       <Typography variant="h1" component="h2">
+       <br></br>
+       <br></br>
+       <br></br>
+       <br></br>
+
+       <Typography variant="h1" component="h2" color="#ff6600"
+    fontWeight= "bold">
       The result is {result}
 </Typography>;
 
 
 
-       
-
-
+      
 
       
     </div>

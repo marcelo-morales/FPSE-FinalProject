@@ -24,8 +24,6 @@ let make = (
 
 ) => {
 
-//canvas
-  
   let (elements, setElements) = React.useState(_ => [])
   let (isDrawing, setIsDrawing) = React.useState(_ => false)
 

@@ -6,6 +6,7 @@
   core
   torch
   yojson
+  operate
   ppx_deriving_yojson.runtime
   dream
   )

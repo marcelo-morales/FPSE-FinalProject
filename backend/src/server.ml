@@ -1,6 +1,10 @@
-[@@@warning "-27"]
+(* [@@@warning "-27"]
 
 open Core
+open Operate
+
+let weights_name_and_path = "/Users/marcelomorales/Desktop/FALL2022JHU/FunctionalProg/FPSE-FinalProject/backend/tests/weights"
+
 
 
     type error_response =
@@ -18,7 +22,7 @@ open Core
 let welcome : Dream.route =
   Dream.get "/" (fun request -> Dream.html "Welcome to Numerade")
 ;;
-    
+     *)
 (*
 get result, callback, instead of responding with html, respondg with a json
   Get result of math operation.
@@ -35,19 +39,19 @@ first_input -> one_2d_array
 second_input -> one_2d_array
    
   *)
-let result : Dream.route =
+(* let result : Dream.route =
   Dream.get "/result/" (fun req ->
     match Dream.all_queries req with
     | [ ("first_input", first); ("second_input", second); ("operation", operation)] ->
-      let first_param, second_paramm =  Int64.of_string first ,  Int64.of_string second  in
+      let first_param, second_paramm =  Float.of_string first ,  Float.of_string second  in
      
      (* What function should be called below??? *)
-      Math.compute ~input_a:first_param  ~input_b: second_param ~op: operation
+     performMath first_param  second_param operation
 
       |> Dream.json
            ~status:(Dream.int_to_status 200)
            ~headers:[ "Access-Control-Allow-Origin", "*" ]
     | _ ->
       Dream.json ~status:`Bad_Request ~headers:[ "Access-Control-Allow-Origin", "*" ] "")
-;;
+;; *)
 
