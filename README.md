@@ -41,7 +41,7 @@ cd backend/src
 ```
 
 ```
-cd dune exec ./train_conv.exe
+dune exec ./train_conv.exe
 ```
 This should go close to 99% accuracy. To get better accuracy look at the executable file for tips
 
