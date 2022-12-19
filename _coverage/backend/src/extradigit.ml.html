@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>extradigit.ml &mdash; Coverage report</title>
+    <meta name="description" content="100.00% coverage in backend/src/extradigit.ml">
+    <link rel="stylesheet" href="../../coverage.css"/>
+    <script src="../../highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>
+        <a href="../../index.html">
+          <span class="dirname">backend/src/</span>extradigit.ml
+        </a>
+      </h1>
+      <h2>100.00%</h2>
+    </div>
+    <div id="navbar">
+    </div>
+    <div id="report">
+      <div id="lines-layer">
+        <pre>
+<a id="L1"></a><span > </span>
+<a id="L2"></a><span > </span>
+<a id="L3"></a><span > </span>
+<a id="L4"></a><span > </span>
+<a id="L5"></a><span > </span>
+<a id="L6"></a><span > </span>
+<a id="L7"></a><span > </span>
+<a id="L8"></a><span > </span>
+<a id="L9"></a><span > </span>
+<a id="L10"></a><span > </span>
+<a id="L11"></a><span > </span>
+<a id="L12"></a><span > </span>
+<a id="L13"></a><span > </span>
+<a id="L14"></a><span > </span>
+<a id="L15"></a><span > </span>
+<a id="L16"></a><span class="visited"> </span>
+<a id="L17"></a><span > </span>
+<a id="L18"></a><span > </span>
+<a id="L19"></a><span > </span>
+<a id="L20"></a><span class="visited"> </span>
+<a id="L21"></a><span class="visited"> </span>
+<a id="L22"></a><span class="visited"> </span>
+<a id="L23"></a><span class="visited"> </span>
+<a id="L24"></a><span > </span>
+<a id="L25"></a><span class="visited"> </span>
+<a id="L26"></a><span > </span>
+<a id="L27"></a><span > </span>
+<a id="L28"></a><span > </span>
+<a id="L29"></a><span class="visited"> </span>
+<a id="L30"></a><span class="visited"> </span>
+<a id="L31"></a><span > </span>
+<a id="L32"></a><span class="visited"> </span>
+<a id="L33"></a><span class="visited"> </span>
+<a id="L34"></a><span > </span>
+<a id="L35"></a><span class="visited"> </span>
+<a id="L36"></a><span > </span>
+<a id="L37"></a><span > </span>
+<a id="L38"></a><span > </span>
+<a id="L39"></a><span class="visited"> </span>
+<a id="L40"></a><span > </span>
+<a id="L41"></a><span > </span>
+<a id="L42"></a><span > </span>
+<a id="L43"></a><span > </span>
+<a id="L44"></a><span > </span>
+<a id="L45"></a><span class="visited"> </span>
+<a id="L46"></a><span class="visited"> </span>
+<a id="L47"></a><span class="visited"> </span>
+<a id="L48"></a><span class="visited"> </span>
+<a id="L49"></a><span class="visited"> </span>
+<a id="L50"></a><span > </span>
+<a id="L51"></a><span class="visited"> </span>
+<a id="L52"></a><span class="visited"> </span>
+<a id="L53"></a><span class="visited"> </span>
+<a id="L54"></a><span > </span>
+<a id="L55"></a><span > </span>
+<a id="L56"></a><span class="visited"> </span>
+<a id="L57"></a><span > </span>
+<a id="L58"></a><span class="visited"> </span>
+<a id="L59"></a><span > </span>
+<a id="L60"></a><span > </span>
+<a id="L61"></a><span > </span>
+<a id="L62"></a><span > </span>
+<a id="L63"></a><span class="visited"> </span>
+<a id="L64"></a><span class="visited"> </span>
+<a id="L65"></a><span class="visited"> </span>
+<a id="L66"></a><span > </span>
+<a id="L67"></a><span > </span>
+</pre>
+      </div>
+      <div id="text-layer">
+        <pre id="line-numbers">
+<a href="#L1"> 1</a>
+<a href="#L2"> 2</a>
+<a href="#L3"> 3</a>
+<a href="#L4"> 4</a>
+<a href="#L5"> 5</a>
+<a href="#L6"> 6</a>
+<a href="#L7"> 7</a>
+<a href="#L8"> 8</a>
+<a href="#L9"> 9</a>
+<a href="#L10">10</a>
+<a href="#L11">11</a>
+<a href="#L12">12</a>
+<a href="#L13">13</a>
+<a href="#L14">14</a>
+<a href="#L15">15</a>
+<a href="#L16">16</a>
+<a href="#L17">17</a>
+<a href="#L18">18</a>
+<a href="#L19">19</a>
+<a href="#L20">20</a>
+<a href="#L21">21</a>
+<a href="#L22">22</a>
+<a href="#L23">23</a>
+<a href="#L24">24</a>
+<a href="#L25">25</a>
+<a href="#L26">26</a>
+<a href="#L27">27</a>
+<a href="#L28">28</a>
+<a href="#L29">29</a>
+<a href="#L30">30</a>
+<a href="#L31">31</a>
+<a href="#L32">32</a>
+<a href="#L33">33</a>
+<a href="#L34">34</a>
+<a href="#L35">35</a>
+<a href="#L36">36</a>
+<a href="#L37">37</a>
+<a href="#L38">38</a>
+<a href="#L39">39</a>
+<a href="#L40">40</a>
+<a href="#L41">41</a>
+<a href="#L42">42</a>
+<a href="#L43">43</a>
+<a href="#L44">44</a>
+<a href="#L45">45</a>
+<a href="#L46">46</a>
+<a href="#L47">47</a>
+<a href="#L48">48</a>
+<a href="#L49">49</a>
+<a href="#L50">50</a>
+<a href="#L51">51</a>
+<a href="#L52">52</a>
+<a href="#L53">53</a>
+<a href="#L54">54</a>
+<a href="#L55">55</a>
+<a href="#L56">56</a>
+<a href="#L57">57</a>
+<a href="#L58">58</a>
+<a href="#L59">59</a>
+<a href="#L60">60</a>
+<a href="#L61">61</a>
+<a href="#L62">62</a>
+<a href="#L63">63</a>
+<a href="#L64">64</a>
+<a href="#L65">65</a>
+<a href="#L66">66</a>
+<a href="#L67">67</a>
+</pre>
+<pre><code class="ocaml">[@@@ocaml.warning "-33"]
+[@@@ocaml.warning "-32"]
+[@@@ocaml.warning "-27"]
+[@@@ocaml.warning "-26"]
+
+open Core
+open Torch
+open Readfile
+open Predict_conv
+
+
+
+
+
+let sum l =
+  <span data-count="8031">L</span>ist.fold ~f:(+.) ~init:0.0 l;;
+                    
+
+let find_index_for_split (imgarray : float array array) =
+  <span data-count="31">l</span>et listarray = Array.to_list (Array.transpose_ex<span data-count="31">n</span> imgarray) in
+  <span data-count="31">L</span>ist.foldi listarray ~init:([]) ~f:(fun i accum elt -&gt; 
+    <span data-count="8030">i</span>f Float.equal (su<span data-count="8030">m</span> @@ Array.to_lis<span data-count="8030">t</span> elt) 0.0  then
+      <span data-count="3418">a</span>ccum @ [i]
+    else
+      <span data-count="4612">a</span>ccum
+)
+
+let extractimages (imgarray : float array array) =
+  <span data-count="29">l</span>et indexlist = find_index_for_split imgarray in
+  <span data-count="29">l</span>et arraylist, tempvar = List.fold indexlist ~init:([],0) ~f:(fun (ls,prev) elt -&gt; 
+    
+    <span data-count="3406">i</span>f ((elt-prev)&gt;2) then
+      <span data-count="289">(</span>ls @ [Array.transpose_ex<span data-count="289">n</span> (Array.su<span data-count="289">b</span> (Array.transpose_ex<span data-count="289">n</span> imgarray) ~pos:prev ~len:(elt-prev))],elt)
+    else
+      <span data-count="3117">(</span>ls,elt)
+
+    
+    ) in
+    <span data-count="29">a</span>rraylist
+
+
+
+
+let padimages (dim1 : int) (arraylist : float array array list)  =
+  <span data-count="22">l</span>et padded_arraylist = List.fold arraylist ~init:[] ~f:(fun accum (elt : float array array) -&gt; 
+    <span data-count="281">l</span>et zeromatrix = Array.make_matrix ~dimx:dim1 ~dimy:dim1 0.0 in
+    <span data-count="281">l</span>et dim2 = Array.length @@ Array.ge<span data-count="281">t</span> (elt) 0 in
+    <span data-count="281">l</span>et () = List.iteri (Array.to_lis<span data-count="281">t</span> elt) ~f:(fun i elt -&gt;
+      <span data-count="7848">l</span>et padding_needed =  ((Float.of_in<span data-count="7848">t</span> dim1) -. (Float.of_in<span data-count="7848">t</span> dim2))/. 2.0 in
+      let padleft = Float.round_up padding_needed in
+      <span data-count="7848">l</span>et padright= Float.round_down padding_needed in
+      <span data-count="7848">l</span>et paddedarray = List.to_array ((List.ini<span data-count="7848">t</span> (Int.of_floa<span data-count="7848">t</span> padleft) ~f:(fun elt -&gt; <span data-count="46308">0</span>.0)) @ (Array.to_lis<span data-count="7848">t</span> elt) @ (List.ini<span data-count="7848">t</span> (Int.of_floa<span data-count="7848">t</span> padright) ~f:(fun elt -&gt; <span data-count="39756">0</span>.0))) in
+      <span data-count="7848">A</span>rray.fill zeromatrix ~pos:(i) ~len:1 paddedarray
+
+      ) in
+    <span data-count="281">a</span>ccum @ [zeromatrix]
+  ) in
+  <span data-count="22">p</span>added_arraylist
+
+
+
+let recognize_multiple_digits (matrix : float array array ) (weights_name_and_path : string) =
+  <span data-count="21">l</span>et list_of_padded_28x28_images = extractimages matrix |&gt; <span data-count="21">(</span>padimages 28) in
+  <span data-count="21">l</span>et long_string = List.fold list_of_padded_28x28_images ~init:"" ~f:(fun accum elt -&gt; <span data-count="280">a</span>ccum ^ (Int.to_strin<span data-count="280">g</span> (predictImageFrom2DArra<span data-count="280">y</span> elt weights_name_and_path))) in
+  <span data-count="21">l</span>ong_string
+
+
+</code></pre>
+      </div>
+    </div>
+    <script src="../../coverage.js"></script>
+  </body>
+</html>
