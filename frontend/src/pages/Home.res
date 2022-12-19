@@ -24,6 +24,8 @@ let make = (
 
 ) => {
 
+//canvas
+  
   let (elements, setElements) = React.useState(_ => [])
   let (isDrawing, setIsDrawing) = React.useState(_ => false)
 
@@ -58,20 +60,6 @@ let make = (
   // Runs everytime `prop1` or `prop2` has changed
 React.useEffect2(() => {
   // Run effects based on prop1 / prop2
-
-  /*
-var el = document.getElementById("myId");
-type document // abstract type for a document object
-@send external getElementById: (document, string) => Dom.element = "getElementById"
-@val external doc: document = "document"
-let el = getElementById(doc, "myId")
-  */
-
-  // type canvas // abstract type for a canvas object
-  // @send external getElementById: (canvas, string) => Dom.element = "getElementById"
-  // @val external doc: canvas = "document"
-
-  // let myCanvas = getElementById(doc, "canvas")
 
   let context = myCanvas.getContext("2d");
   context.lineCap = "round";
@@ -226,11 +214,6 @@ let pixelsNotFilledIn = () => {
 
   let (mathResult) = React.useState(_ => 0.)
 
-//   let handleInput = evt => {
-//     let val = ReactEvent.Form.target(evt)["value"]
-//     setInput(_ => val)
-//   }
-// POST request
 
   let handleMath = _evt => {
     open Promise
