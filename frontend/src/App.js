@@ -207,7 +207,7 @@ function App() {
   }
 
   const startMathAdd = () => {
-    setOperation("add")
+    setOperation("+")
     countNumPixels();
     buttonPressed= true;
 
@@ -219,7 +219,7 @@ function App() {
   }
 
   const startMathSubtract = () => {
-    setOperation("subtract")
+    setOperation("-")
     countNumPixels();
     buttonPressed= true;
 
@@ -231,7 +231,7 @@ function App() {
   }
 
   const startMathMultiply = () => {
-    setOperation("multiply")
+    setOperation("*")
     countNumPixels();
     buttonPressed= true;
 
@@ -243,7 +243,7 @@ function App() {
   }
 
   const startMathDivide = () => {
-    setOperation("divide")
+    setOperation("/")
     countNumPixels();
     buttonPressed= true;
 
@@ -285,6 +285,8 @@ function App() {
 
 
 
+
+
   return (
     <div>
       
@@ -294,8 +296,8 @@ function App() {
       <canvas
         id="canvas"
         className="App"
-        width={28}
-        height={28}
+        width={28*10}
+        height={28*10}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}

@@ -17,9 +17,12 @@ let performMath (matrix1 : 'a array ) (matrix2 : 'a array ) (op: string) (weight
   let num1 = Float.of_int (predictImageFrom1DArray matrix1 weight_file_and_path) in
   let num2 = Float.of_int (predictImageFrom1DArray matrix2 weight_file_and_path) in
   match op with
-  | "+" -> num1 +. num2
+  | "" -> num1 +. num2
   | "-" -> num1 -. num2
   | "*" -> num1 *. num2
   | "/" -> num1 /. num2
   | _ -> failwith "wrong"
+
+
+
 
