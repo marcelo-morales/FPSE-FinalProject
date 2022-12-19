@@ -47,7 +47,7 @@ This should go close to 99% accuracy. To get better accuracy look at the executa
 
 To test the neural network for a handwritten file be sure that you are in the most outer folder:
 ```
-cd dune exec ./multiple_digits_tester.exe
+dune exec ./multiple_digits_tester.exe
 ```
 Look at the comments of the multiple_digits_tester.ml to see which precollected handwritten digits you can test.
 If you want to test you own handwritten numbers on the neural network, then put the image in the backend/tests/data - make sure that is the same format as the other data files
