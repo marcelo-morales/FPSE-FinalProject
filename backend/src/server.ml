@@ -34,7 +34,7 @@ get result, callback, instead of responding with html, respondg with a json
 first_input -> one_2d_array
 second_input -> one_2d_array
    
-   *)
+  *)
 let result : Dream.route =
   Dream.get "/result/" (fun req ->
     match Dream.all_queries req with

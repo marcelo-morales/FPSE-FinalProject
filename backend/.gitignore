@@ -48,7 +48,6 @@ MLtest/_build
 MLtest/_build
 MLtest/_build/
 
-src/*
 
 *.cmi
 
