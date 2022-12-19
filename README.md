@@ -8,6 +8,12 @@ GitHub Repo URL: https://github.com/marcelo-morales/FPSE-FinalProject
 
 Implemantaion Plan can be found in the following Kanban board: https://github.com/users/marcelo-morales/projects/3 
 
+## Reponsibilities
+* All machine learning backend (Christian)
+* All testing (Christian)
+* Website Frontend (Marcelo)
+* Website Backend (Marcelo)
+
 
 ## Installing / Getting started
 
@@ -18,17 +24,43 @@ opam install dream
 npm install rescript
 ```
 . Ensure you have the package manager npm.
-If you are on windows and you are missing npm do:
+If you are on windows subsystem or linux and you are missing npm do:
 ```
 sudo apt install npm
 ```
+Make sure that you node version is atleast 16.x by doing:
+```
+node -v
+```
 
-To run a simple machine learning test, you have to be in the most outer folder:
+## Machine Learning Part
+To run the machine learning testsuite, you have to be in the most outer folder:
 
 ```
 dune test
 ```
-Look at the test to see how it a function is run.
+Look at the tests to see how the functions are run.
+
+To train the neural network make sure that you are in backend/src:
+```
+cd backend/src
+```
+
+```
+dune exec ./train_conv.exe
+```
+This should go close to 99% accuracy. To get better accuracy look at the executable file for tips
+
+To test the neural network for a handwritten file be sure that you are in the **most outer folder**:
+```
+dune exec ./backend/src/multiple_digits_tester.exe
+```
+Look at the comments of the multiple_digits_tester.ml to see which precollected handwritten digits you can test.
+If you want to test you own handwritten numbers on the neural network, then put the image in the backend/tests/data - make sure that is the same format as the other data files
+
+
+
+## Website Part
 
 To run the Dream Server as a localhost in your computer run (ensure you are in the frontend directory).:
 
