@@ -30,12 +30,12 @@ def sampleImage(numtimes):
 
     plt.imshow(combined)
 
-    plt.savefig("0000")
-    np.savetxt("0000.txt",combined,fmt='%19.2f')    
+    plt.savefig("../tests/data/0000")
+    np.savetxt("../tests/data/0000.txt",combined,fmt='%19.2f')    
 
     
 
-sampleImage(30)
+sampleImage(10)
 
 
 
