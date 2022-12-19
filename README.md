@@ -45,7 +45,7 @@ dune exec ./train_conv.exe
 ```
 This should go close to 99% accuracy. To get better accuracy look at the executable file for tips
 
-To test the neural network for a handwritten file be sure that you are in <u> the <u> **most outer folder**:
+To test the neural network for a handwritten file be sure that you are in <u> the **most outer folder**:
 ```
 dune exec ./backend/src/multiple_digits_tester.exe
 ```
