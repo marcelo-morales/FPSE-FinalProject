@@ -7,17 +7,10 @@ open Core
 open Torch
 open Readfile
 
-
-
-let mylist = strings_from_file "handwrittenImage.txt" |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat ;;
-
-(* let mylist2 = List.map mylist ~f:(fun x -> float_of_string x) ;;  *)
-
-let t2 =  Array.of_list mylist |> Tensor.of_float1 ;;
-
+(* This executable trains the model *)
 (* This should reach ~99% accuracy. *)
 let batch_size = 256
-let epochs = 400
+let epochs = 200
 let learning_rate = 0.001
 
 let device = Device.cuda_if_available () 
@@ -67,14 +60,12 @@ let () =
     Caml.Gc.full_major ()
   done
 
-  
+
+  (* Saving the model!! *)
 let test_model = model ~is_training:false 
 let () = Serialize.save_multi ~named_tensors:(Var_store.all_vars vs) ~filename:"weights"
 (* let () = Serialize.load_multi_ ~named_tensors:(Var_store.all_vars vs) ~filename:"heyo" *)
 let () = Serialize.load_multi_ ~named_tensors:(Var_store.all_vars vs) ~filename:"weights"
-let test_accuracy_on_image =
-  (* (model (Tensor.unsqueeze t2 ~dim:0 )) |> Tensor.squeeze |> Tensor.to_float1_exn |> Array.to_list *)
-  Tensor.(argmax ~dim:(-1)  (test_model (Tensor.unsqueeze t2 ~dim:0 ))) |> Tensor.to_float0_exn 
-  let () = printf "\n Neural Network predicts: %i \n" (int_of_float test_accuracy_on_image);
+
 
 

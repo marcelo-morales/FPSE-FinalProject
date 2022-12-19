@@ -55,45 +55,25 @@ let load_2d_array name_and_path =
 
 
 
-
-(* let print_array_string theArray =
-  for i=0 to 27 do
-    print_endline "";
-    for j=0 to 27 do
-      (* printf "%s" (string_of_float theArray.(i).(j)); *)
-      printf "%s " (theArray.(j).(i))
-    done
-  done;; *)
-
-
+(* This function is only for visualisation purposes, therefore it cannot be tested *) (* Two for loop has been used since this the canonical way of doing it in data science*)
+[@@@coverage off]
 let print_array_auto theArray =
   let dim1 = Array.length theArray in
   let dim2 = Array.length @@ Array.get theArray 0 in
   for i=0 to (dim1-1) do
     print_endline "";
     for j=0 to (dim2-1) do
-      (* printf "%s" (string_of_float theArray.(i).(j)); *)
       printf "%s" (sprintf "%.0f " theArray.(i).(j));
     done;
   done;
   print_endline "\n";;
   
-  
+  [@@@coverage on]
   (* let () = print_endline ""; *)
 
 
 
-;;
 
-let print_array theArray dim1 dim2 =
-  for i=0 to dim1 do
-    print_endline "";
-    for j=0 to dim2 do
-      (* printf "%s" (string_of_float theArray.(i).(j)); *)
-      printf "%s" (sprintf "%.0f " theArray.(i).(j))
-    done
-  done;;
-  
 
 
 
