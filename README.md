@@ -8,6 +8,12 @@ GitHub Repo URL: https://github.com/marcelo-morales/FPSE-FinalProject
 
 Implemantaion Plan can be found in the following Kanban board: https://github.com/users/marcelo-morales/projects/3 
 
+## Reponsibilities
+* All machine learning backend (Christian)
+* All testing (Christian)
+* Website Frontend (Marcelo)
+* Website Backend (Marcelo)
+
 
 ## Installing / Getting started
 
