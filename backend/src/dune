@@ -16,13 +16,18 @@
   (name readfile)
   (modules readfile)
   (libraries 
-  torch npy core_unix core_unix.sys_unix))
+  torch npy core_unix core_unix.sys_unix)
+  (preprocess (pps bisect_ppx)))
 
 (executable
   (name train_conv)
   (modules train_conv)
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
+(executable
+  (name multiple_digits_tester)
+  (modules multiple_digits_tester)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile operate extradigit predict_conv))
 
 
 (library
@@ -35,16 +40,13 @@
 (library
 (name operate)
 (modules operate)
-(libraries core torch npy core_unix core_unix.sys_unix readfile predict_conv)
+(libraries core torch npy core_unix core_unix.sys_unix readfile predict_conv extradigit)
 (preprocess (pps bisect_ppx))
 )
 
 (library
   (name extradigit)
   (modules extradigit)
-  (libraries core torch npy core_unix core_unix.sys_unix readfile)
+  (libraries core torch npy core_unix core_unix.sys_unix readfile predict_conv)
   (preprocess (pps bisect_ppx))
   )
-
-
-(data_only_dirs lib node_modules)
