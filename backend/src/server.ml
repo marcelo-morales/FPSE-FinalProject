@@ -24,7 +24,7 @@ let weights_name_and_path = "/Users/marcelomorales/Desktop/FALL2022JHU/Functiona
 let welcome : Dream.route =
   Dream.get "/" (fun request -> Dream.html "Welcome to Numerade")
 ;;
-     *)
+     
 (*
 get result, callback, instead of responding with html, respondg with a json
   Get result of math operation.
