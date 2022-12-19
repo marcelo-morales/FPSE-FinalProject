@@ -62,7 +62,19 @@ let load_1d_array name_and_path =
     done
   done;; *)
 
-let print_array  theArray dim1 dim2 =
+
+let print_array_auto theArray =
+  let dim1 = Array.length theArray in
+  let dim2 = Array.length @@ Array.get theArray 0 in
+  for i=0 to (dim1-1) do
+    print_endline "";
+    for j=0 to (dim2-1) do
+      (* printf "%s" (string_of_float theArray.(i).(j)); *)
+      printf "%s" (sprintf "%.0f " theArray.(i).(j))
+    done
+  done;;
+
+let print_array theArray dim1 dim2 =
   for i=0 to dim1 do
     print_endline "";
     for j=0 to dim2 do
