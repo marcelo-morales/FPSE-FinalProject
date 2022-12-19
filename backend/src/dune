@@ -11,8 +11,8 @@
   (libraries core torch npy core_unix core_unix.sys_unix readfile))
 
 (executable
-  (name executabletester)
-  (modules executabletester)
+  (name multiple_digits_tester)
+  (modules multiple_digits_tester)
   (libraries core torch npy core_unix core_unix.sys_unix readfile operate extradigit))
 
 

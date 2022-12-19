@@ -12,6 +12,7 @@ open Predict_conv
 open Extradigit
 
 
+(* Main math performing function *)
 let performMath (matrix1 : 'a array ) (matrix2 : 'a array ) (op: string) (weight_file_and_path : string) = 
   let num1 = Float.of_int (predictImageFrom1DArray matrix1 weight_file_and_path) in
   let num2 = Float.of_int (predictImageFrom1DArray matrix2 weight_file_and_path) in
