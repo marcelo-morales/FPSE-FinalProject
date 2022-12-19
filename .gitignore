@@ -48,6 +48,7 @@ MLtest/_build
 MLtest/_build
 MLtest/_build/
 
+.coverage
 *.cmi
 
 _build
