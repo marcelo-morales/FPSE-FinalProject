@@ -1,4 +1,6 @@
 [@@@warning "-27"]
+[@@@warning "-33"]
+
 
 open Core
 
@@ -35,7 +37,7 @@ first_input -> one_2d_array
 second_input -> one_2d_array
    
   *)
-let result : Dream.route =
+(* let result : Dream.route =
   Dream.get "/result/" (fun req ->
     match Dream.all_queries req with
     | [ ("first_input", first); ("second_input", second); ("operation", operation)] ->
@@ -49,5 +51,5 @@ let result : Dream.route =
            ~headers:[ "Access-Control-Allow-Origin", "*" ]
     | _ ->
       Dream.json ~status:`Bad_Request ~headers:[ "Access-Control-Allow-Origin", "*" ] "")
-;;
+;; *)
 

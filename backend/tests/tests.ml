@@ -40,8 +40,6 @@ let testarray1 = [|[|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
                    [|0.0; 0.0; 1.0; 1.0; 1.0; 0.0; 0.0; 1.0; 1.0; 0.0|];
                    [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]|]
 
-let array1D_of_image_one = load_1d_array image_name_and_path_for_one
-let array1D_of_image_four = load_1d_array image_name_and_path_for_four
 
 let testarray2 = [| [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]; 
                     [|0.0; 0.0; 1.0; 0.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|]; 
@@ -173,9 +171,6 @@ let multiple_digits_test _ =
   assert_equal "5424937279" bignumber1_prediction;
   assert_equal "997073645380142690390262898297" bignumber2_prediction;
   assert_equal "2372075.7669435944" math_operation6
-
-let math_operation_test _ =
-  assert_equal 5.0 (performMath array1D_of_image_four array1D_of_image_one "+" weights_name_and_path) 
 
 
 let ml_tests =
