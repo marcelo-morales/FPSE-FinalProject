@@ -42,17 +42,19 @@ let sum l =
                     
 
 let find_index_for_split (imgarray : float array array) =
-  let listarray = Array.to_list (Array.transpose_exn test_image) in
+  let listarray = Array.to_list (Array.transpose_exn imgarray) in
   List.foldi listarray ~init:([]) ~f:(fun i accum elt -> 
     if Float.equal (sum @@ Array.to_list elt) 0.0  then
       accum @ [i]
     else
       accum
 )
+
+
 (* hey *)
 
 let extract_digit_index (imgarray : float array array) =
-  let listarray = Array.to_list (Array.transpose_exn test_image) in
+  let listarray = Array.to_list (Array.transpose_exn imgarray) in
   List.foldi listarray ~init:([]) ~f:(fun i accum elt -> 
      accum @ [(sum @@ Array.to_list elt)]
   )
@@ -63,7 +65,7 @@ let extractimages (imgarray : float array array) =
   let indexlist = find_index_for_split imgarray in
   let arraylist, tempvar = List.fold indexlist ~init:([],0) ~f:(fun (ls,prev) elt -> 
     
-    if ((elt-prev)>2) then
+    if ((elt-prev)>3) then
       (ls @ [Array.transpose_exn (Array.sub (Array.transpose_exn imgarray) ~pos:prev ~len:(elt-prev))],elt)
     else
       (ls,elt)
@@ -103,7 +105,7 @@ let padimages (arraylist : float array array list) =
       let padleft = Float.round_up padding_needed in
       let padright= Float.round_down padding_needed in
       let paddedarray = List.to_array ((List.init (Int.of_float padleft) ~f:(fun elt -> 0.0)) @ (Array.to_list elt) @ (List.init (Int.of_float padright) ~f:(fun elt -> 0.0))) in
-      Array.fill zeromatrix ~pos:(((dim3/2)-1)+i) ~len:1 paddedarray
+      Array.fill zeromatrix ~pos:(i) ~len:1 paddedarray
 
       ) in
     accum @ [zeromatrix]
@@ -111,7 +113,7 @@ let padimages (arraylist : float array array list) =
   padded_arraylist
 
 
-
+  (* ((dim3/2)-1) *)
 
 
 (* 

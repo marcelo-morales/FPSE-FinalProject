@@ -9,10 +9,9 @@ open Core
 open Torch
 open Readfile
 open Predict_conv
+open Extradigit
 
-(* heyo *)
 
-(* TODO: finish this *)
 let performMath (matrix1 : 'a array ) (matrix2 : 'a array ) (op: string) (weight_file_and_path : string) = 
   let num1 = Float.of_int (predictImageFrom1DArray matrix1 weight_file_and_path) in
   let num2 = Float.of_int (predictImageFrom1DArray matrix2 weight_file_and_path) in
@@ -21,5 +20,13 @@ let performMath (matrix1 : 'a array ) (matrix2 : 'a array ) (op: string) (weight
   | "-" -> num1 -. num2
   | "*" -> num1 *. num2
   | "/" -> num1 /. num2
-  | _ -> failwith "wrong"
+  | _ -> failwith "Something went wrong"
+
+
+
+
+
+
+  
+
 

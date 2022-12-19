@@ -50,6 +50,9 @@ let make_2d_array ls =
 let load_1d_array name_and_path =
   strings_from_file name_and_path |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> List.concat |> Array.of_list
 
+let load_2d_array name_and_path =
+  strings_from_file name_and_path |> String.split_on_chars ~on:['\n']  |> sanitize_list |> apply_remove_first |> make_biglist |> make_2d_array
+
 
 
 
@@ -70,9 +73,17 @@ let print_array_auto theArray =
     print_endline "";
     for j=0 to (dim2-1) do
       (* printf "%s" (string_of_float theArray.(i).(j)); *)
-      printf "%s" (sprintf "%.0f " theArray.(i).(j))
-    done
-  done;;
+      printf "%s" (sprintf "%.0f " theArray.(i).(j));
+    done;
+  done;
+  print_endline "\n";;
+  
+  
+  (* let () = print_endline ""; *)
+
+
+
+;;
 
 let print_array theArray dim1 dim2 =
   for i=0 to dim1 do

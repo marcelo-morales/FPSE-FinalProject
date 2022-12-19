@@ -26,16 +26,27 @@ let testarray1 = [|[|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
                    [|0.0; 0.0; 1.0; 1.0; 1.0; 0.0; 0.0; 1.0; 1.0; 0.0|];
                    [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]|]
 
+
+let testarray2 = [| [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]; 
+                    [|0.0; 0.0; 1.0; 0.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|]; 
+                    [|0.0; 0.0; 1.0; 0.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|]; 
+                    [|0.0; 0.0; 1.0; 1.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
+                    [|0.0; 0.0; 1.0; 1.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
+                    [|0.0; 0.0; 0.0; 0.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
+                    [|0.0; 0.0; 0.0; 0.0; 1.0; 0.0; 0.0; 0.0; 0.0; 0.0|];
+                    [|0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0; 0.0|]|]
+
 (* let testarray1_after_extract = [[|[|0.; 0.; 0.; 0.|]; [|0.; 1.; 1.; 1.|]; [|0.; 1.; 0.; 1.|];[|0.; 1.; 1.; 1.|]; [|0.; 0.; 0.; 0.|]|];[|[|0.; 0.; 0.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|]; [|0.; 1.; 1.|];[|0.; 0.; 0.|]|]]; *)
   
+(* let testarray1_after_extract = extractimages testarray1
 
-
-(* let () = print_array (List.nth_exn testarray1_after_extract 0) 4 5 *)
+let () = print_array_auto (List.nth_exn testarray1_after_extract 1) *)
 
 (* let test_2darray = Array.make_matrix ~dimx:28 ~dimy:28 0.0 *)
 
 (* testarray1_after_extract *)
 
+(* let () = print_array_auto testarray1 *)
 
 let image_name_and_path_for_one = "../../../../backend/tests/handwrittenImageOfOne.txt"
 let image_name_and_path_for_four = "../../../../backend/tests/handwrittenImageOfFour.txt"
@@ -44,13 +55,20 @@ let weights_name_and_path = "../../../../backend/tests/weights"
 let array1D_of_image_one = load_1d_array image_name_and_path_for_one
 let array1D_of_image_four = load_1d_array image_name_and_path_for_four
 
-(* let eximages = extractimages array2D_of_image_four
+
+let array2D_of_image_four = load_2d_array image_name_and_path_for_four
+
+let eximages = extractimages array2D_of_image_four
+(* let eximages = extractimages testarray2 *)
 
 (* let padimg = padimages eximages *)
 
-let () = print_array array2D_of_image_four 27 27 *)
 
-(* let () = List.iter padimg ~f:(fun elt -> print_array elt) *)
+
+
+let () = print_array_auto array2D_of_image_four
+
+let () = List.iter eximages ~f:(fun elt -> print_array_auto elt; print_endline "")
  
 
 let prediction1 = (predictImageFromFileName image_name_and_path_for_one weights_name_and_path)
