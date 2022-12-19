@@ -53,12 +53,12 @@
 <a id="L29"></a><span class="visited"> </span>
 <a id="L30"></a><span > </span>
 <a id="L31"></a><span > </span>
-<a id="L32"></a><span class="visited"> </span>
+<a id="L32"></a><span > </span>
 <a id="L33"></a><span class="visited"> </span>
 <a id="L34"></a><span class="visited"> </span>
-<a id="L35"></a><span > </span>
-<a id="L36"></a><span class="visited"> </span>
-<a id="L37"></a><span > </span>
+<a id="L35"></a><span class="visited"> </span>
+<a id="L36"></a><span > </span>
+<a id="L37"></a><span class="visited"> </span>
 <a id="L38"></a><span > </span>
 <a id="L39"></a><span > </span>
 <a id="L40"></a><span > </span>
@@ -66,6 +66,7 @@
 <a id="L42"></a><span > </span>
 <a id="L43"></a><span > </span>
 <a id="L44"></a><span > </span>
+<a id="L45"></a><span > </span>
 </pre>
       </div>
       <div id="text-layer">
@@ -114,6 +115,7 @@
 <a href="#L42">42</a>
 <a href="#L43">43</a>
 <a href="#L44">44</a>
+<a href="#L45">45</a>
 </pre>
 <pre><code class="ocaml">
 
@@ -145,6 +147,7 @@ let performMath (matrix1 : 'a array ) (matrix2 : 'a array ) (op: string) (weight
   in
   <span data-count="25">r</span>esult
 
+(* Main math performing function for multiple digits *)
 let performMath_Multiple_Digits (matrix1 : 'a array array ) (matrix2 : 'a array array) (op: string) (weight_file_and_path : string) = 
   <span data-count="5">l</span>et num1 = Float.of_string (recognize_multiple_digit<span data-count="5">s</span> matrix1 weight_file_and_path) in
   <span data-count="5">l</span>et num2 = Float.of_string (recognize_multiple_digit<span data-count="5">s</span> matrix2 weight_file_and_path) in

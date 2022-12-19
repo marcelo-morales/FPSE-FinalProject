@@ -17,9 +17,9 @@ open Sys_unix
 (* This needs to be called from the outer directory for it to run *)
 (* Provide the path to image of handwritten numbers you want to have predicted  *)
 (* The commented out paths are examples you can test for your self *) (* For fun you should find the file linked to in the directory and see the png associated with it *)
-let image_name_and_path = "backend/tests/data/bignumber1.txt"
+(* let image_name_and_path = "backend/tests/data/bignumber1.txt" *)
 (* let image_name_and_path = "backend/tests/data/bignumber2.txt" *)
-(* let image_name_and_path = "backend/tests/data/2287.txt" *)
+let image_name_and_path = "backend/tests/data/2287.txt"
 (* let image_name_and_path = "backend/tests/data/7519.txt" *)
 (* let image_name_and_path = "backend/tests/data/handwrittenImageOfOne.txt" *)
 

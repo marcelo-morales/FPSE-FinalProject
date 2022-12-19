@@ -195,36 +195,36 @@ open Readfile
 
 let conv_neural_network (t2 : Tensor.t) (weigths_name : string ) =
   (* This should reach ~99% accuracy. *)
-  <span data-count="360">l</span>et batch_size = 256 in
+  <span data-count="390">l</span>et batch_size = 256 in
   let epochs = 100 in
   let learning_rate = 0.001 in
 
 
   let device = Device.cuda_if_available ()  in
-  <span data-count="360">l</span>et vs = Var_store.create ~name:"cnn" ~device ()  in
-  <span data-count="360">l</span>et conv2d1 = Layer.conv2d_ vs ~ksize:5 ~stride:1 ~input_dim:1 32  in
-  <span data-count="360">l</span>et conv2d2 = Layer.conv2d_ vs ~ksize:5 ~stride:1 ~input_dim:32 64  in
-  <span data-count="360">l</span>et linear1 = Layer.linear vs ~activation:Relu ~input_dim:1024 1024  in
-  <span data-count="360">l</span>et linear2 = Layer.linear vs ~input_dim:1024 10  in
-  <span data-count="360">l</span>et adam = Optimizer.adam vs ~learning_rate  in
-  <span data-count="360">l</span>et model xs ~is_training =
-    <span data-count="360">T</span>ensor.reshape xs ~shape:[ -1; 1; 28; 28 ]
-    |&gt; <span data-count="360">L</span>ayer.forward conv2d1
-    |&gt; <span data-count="360">T</span>ensor.max_pool2d ~ksize:(2, 2)
-    |&gt; <span data-count="360">L</span>ayer.forward conv2d2
-    |&gt; <span data-count="360">T</span>ensor.max_pool2d ~ksize:(2, 2)
-    |&gt; <span data-count="360">T</span>ensor.reshape ~shape:[ -1; 1024 ]
-    |&gt; <span data-count="360">L</span>ayer.forward linear1
-    |&gt; <span data-count="360">T</span>ensor.dropout ~p:0.5 ~is_training
-    |&gt; <span data-count="360">L</span>ayer.forward linear2 in
+  <span data-count="390">l</span>et vs = Var_store.create ~name:"cnn" ~device ()  in
+  <span data-count="390">l</span>et conv2d1 = Layer.conv2d_ vs ~ksize:5 ~stride:1 ~input_dim:1 32  in
+  <span data-count="390">l</span>et conv2d2 = Layer.conv2d_ vs ~ksize:5 ~stride:1 ~input_dim:32 64  in
+  <span data-count="390">l</span>et linear1 = Layer.linear vs ~activation:Relu ~input_dim:1024 1024  in
+  <span data-count="390">l</span>et linear2 = Layer.linear vs ~input_dim:1024 10  in
+  <span data-count="390">l</span>et adam = Optimizer.adam vs ~learning_rate  in
+  <span data-count="390">l</span>et model xs ~is_training =
+    <span data-count="390">T</span>ensor.reshape xs ~shape:[ -1; 1; 28; 28 ]
+    |&gt; <span data-count="390">L</span>ayer.forward conv2d1
+    |&gt; <span data-count="390">T</span>ensor.max_pool2d ~ksize:(2, 2)
+    |&gt; <span data-count="390">L</span>ayer.forward conv2d2
+    |&gt; <span data-count="390">T</span>ensor.max_pool2d ~ksize:(2, 2)
+    |&gt; <span data-count="390">T</span>ensor.reshape ~shape:[ -1; 1024 ]
+    |&gt; <span data-count="390">L</span>ayer.forward linear1
+    |&gt; <span data-count="390">T</span>ensor.dropout ~p:0.5 ~is_training
+    |&gt; <span data-count="390">L</span>ayer.forward linear2 in
 
     let test_model = model ~is_training:false   in
 
-    let () = Serialize.load_multi_ ~named_tensors:(Var_store.all_var<span data-count="360">s</span> vs) ~filename:weigths_name in
+    let () = Serialize.load_multi_ ~named_tensors:(Var_store.all_var<span data-count="390">s</span> vs) ~filename:weigths_name in
   
     let test_accuracy_on_image  =
-      Tensor.(argma<span data-count="360">x</span> ~dim:(-1)  (test_mode<span data-count="360">l</span> (Tensor.unsqueez<span data-count="360">e</span> t2 ~dim:0 ))) |&gt; Tensor.to_float0_exn in
-      <span data-count="360">i</span>nt_of_float test_accuracy_on_image
+      Tensor.(argma<span data-count="390">x</span> ~dim:(-1)  (test_mode<span data-count="390">l</span> (Tensor.unsqueez<span data-count="390">e</span> t2 ~dim:0 ))) |&gt; Tensor.to_float0_exn in
+      <span data-count="390">i</span>nt_of_float test_accuracy_on_image
 
 
 
@@ -253,11 +253,11 @@ let predictImageFrom1DArray (matrix : 'a array ) (weigths_name : string ) =
 
 let predictImageFrom2DArray (matrix : float array array ) (weigths_name : string ) =
 
-  <span data-count="285">l</span>et t2 = Tensor.of_float1 (Array.conca<span data-count="285">t</span> (Array.to_lis<span data-count="285">t</span> matrix)) in
+  <span data-count="315">l</span>et t2 = Tensor.of_float1 (Array.conca<span data-count="315">t</span> (Array.to_lis<span data-count="315">t</span> matrix)) in
 
   
   (* This should reach ~99% accuracy. *)
-  <span data-count="285">c</span>onv_neural_network t2 weigths_name
+  <span data-count="315">c</span>onv_neural_network t2 weigths_name
 </code></pre>
       </div>
     </div>

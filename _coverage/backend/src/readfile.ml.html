@@ -51,32 +51,32 @@
 <a id="L27"></a><span class="visited"> </span>
 <a id="L28"></a><span > </span>
 <a id="L29"></a><span > </span>
-<a id="L30"></a><span class="visited"> </span>
-<a id="L31"></a><span > </span>
+<a id="L30"></a><span > </span>
+<a id="L31"></a><span class="visited"> </span>
 <a id="L32"></a><span > </span>
-<a id="L33"></a><span class="visited"> </span>
+<a id="L33"></a><span > </span>
 <a id="L34"></a><span > </span>
-<a id="L35"></a><span > </span>
-<a id="L36"></a><span class="visited"> </span>
+<a id="L35"></a><span class="visited"> </span>
+<a id="L36"></a><span > </span>
 <a id="L37"></a><span > </span>
 <a id="L38"></a><span > </span>
 <a id="L39"></a><span class="visited"> </span>
 <a id="L40"></a><span > </span>
 <a id="L41"></a><span > </span>
 <a id="L42"></a><span > </span>
-<a id="L43"></a><span > </span>
-<a id="L44"></a><span class="visited"> </span>
+<a id="L43"></a><span class="visited"> </span>
+<a id="L44"></a><span > </span>
 <a id="L45"></a><span > </span>
 <a id="L46"></a><span > </span>
-<a id="L47"></a><span > </span>
-<a id="L48"></a><span class="visited"> </span>
+<a id="L47"></a><span class="visited"> </span>
+<a id="L48"></a><span > </span>
 <a id="L49"></a><span > </span>
 <a id="L50"></a><span > </span>
 <a id="L51"></a><span class="visited"> </span>
 <a id="L52"></a><span > </span>
 <a id="L53"></a><span > </span>
 <a id="L54"></a><span > </span>
-<a id="L55"></a><span > </span>
+<a id="L55"></a><span class="visited"> </span>
 <a id="L56"></a><span > </span>
 <a id="L57"></a><span > </span>
 <a id="L58"></a><span > </span>
@@ -102,6 +102,10 @@
 <a id="L78"></a><span > </span>
 <a id="L79"></a><span > </span>
 <a id="L80"></a><span > </span>
+<a id="L81"></a><span > </span>
+<a id="L82"></a><span > </span>
+<a id="L83"></a><span > </span>
+<a id="L84"></a><span > </span>
 </pre>
       </div>
       <div id="text-layer">
@@ -186,6 +190,10 @@
 <a href="#L78">78</a>
 <a href="#L79">79</a>
 <a href="#L80">80</a>
+<a href="#L81">81</a>
+<a href="#L82">82</a>
+<a href="#L83">83</a>
+<a href="#L84">84</a>
 </pre>
 <pre><code class="ocaml">
 [@@@ocaml.warning "-33"]
@@ -196,48 +204,52 @@
 open Core
 open Torch
 
-
+(* Reads string from file *)
 let strings_from_file filename = 
-  <span data-count="46">l</span>et strings = In_channel.read_all filename in  (* Cannot test files *)
-  <span data-count="46">s</span>trings;;
+  <span data-count="49">l</span>et strings = In_channel.read_all filename in  (* Cannot test files *)
+  <span data-count="49">s</span>trings;;
 
-
+(* Removes everything but float numbers *)
 let sanitize (s : string) : string option =
-  <span data-count="1311">m</span>atch String.length s with
-  | <span data-count="74">0</span> -&gt; None
-  | <span data-count="1292">_</span> -&gt;  Some (Str.global_replace (Str.regex<span data-count="1264">p</span> "[^0-9.]+") " " s |&gt; <span data-count="1292">S</span>tring.lowercas<span data-count="1292">e</span>)
+  <span data-count="1398">m</span>atch String.length s with
+  | <span data-count="77">0</span> -&gt; None
+  | <span data-count="1376">_</span> -&gt;  Some (Str.global_replace (Str.regex<span data-count="1348">p</span> "[^0-9.]+") " " s |&gt; <span data-count="1376">S</span>tring.lowercas<span data-count="1376">e</span>)
 
 
-
+(* Santizes lists of strings and removes everything but float numbers *)
 let sanitize_list stringlist =
-  <span data-count="74">L</span>ist.fold stringlist ~init:[] ~f:(fun accum x -&gt;
-      <span data-count="1308">m</span>atch sanitize x with
-      | <span data-count="73">N</span>one -&gt; accum
-      | <span data-count="1291">S</span>ome sanitized -&gt; accum @ [ sanitized ]);;
+  <span data-count="77">L</span>ist.fold stringlist ~init:[] ~f:(fun accum x -&gt;
+      <span data-count="1395">m</span>atch sanitize x with
+      | <span data-count="76">N</span>one -&gt; accum
+      | <span data-count="1375">S</span>ome sanitized -&gt; accum @ [ sanitized ]);;
 
+(* Removes first character from string *)
 let remove_first_character str =
-  <span data-count="1262">S</span>tring.slice str 1 (String.lengt<span data-count="1290">h</span> str);;
+  <span data-count="1346">S</span>tring.slice str 1 (String.lengt<span data-count="1374">h</span> str);;
 
+(* Removes first character from a string list *)
 let apply_remove_first ls =
-  <span data-count="73">L</span>ist.map ls ~f:(fun x -&gt; <span data-count="1288">r</span>emove_first_character x)
+  <span data-count="76">L</span>ist.map ls ~f:(fun x -&gt; <span data-count="1372">r</span>emove_first_character x)
 
+(* Changes string list to float list *)
 let change_to_float ls =
-  <span data-count="1261">L</span>ist.map ls ~f:(fun x -&gt; <span data-count="231308">F</span>loat.of_string x)
+  <span data-count="1348">L</span>ist.map ls ~f:(fun x -&gt; <span data-count="254832">F</span>loat.of_string x)
 
+  (* converts list of strings to a list of lists of strings  *)
 let make_biglist ls =
-  <span data-count="73">L</span>ist.fold ls ~init:[] ~f:(fun accum x -&gt; <span data-count="1288">a</span>ccum @ [(change_to_floa<span data-count="1288">t</span> (String.split_on_char<span data-count="9100">s</span> x ~on:[' ']))] )
+  <span data-count="77">L</span>ist.fold ls ~init:[] ~f:(fun accum x -&gt; <span data-count="1374">a</span>ccum @ [(change_to_floa<span data-count="1374">t</span> (String.split_on_char<span data-count="9186">s</span> x ~on:[' ']))] )
 
-
-
+(* Converts string of lits of lists to float array array *)
 let make_2d_array ls =
-  <span data-count="53">L</span>ist.to_array @@ List.fol<span data-count="53">d</span> ls ~init:[] ~f:(fun accum elt -&gt; <span data-count="701">a</span>ccum @ [List.to_arra<span data-count="728">y</span> elt])
+  <span data-count="56">L</span>ist.to_array @@ List.fol<span data-count="56">d</span> ls ~init:[] ~f:(fun accum elt -&gt; <span data-count="785">a</span>ccum @ [List.to_arra<span data-count="812">y</span> elt])
 
-
+(* Loads image as 1D array *)
 let load_1d_array name_and_path =
   <span data-count="10">s</span>trings_from_file name_and_path |&gt; <span data-count="11">S</span>tring.split_on_chars ~on:['\n']  |&gt; <span data-count="11">s</span>anitize_list |&gt; <span data-count="10">a</span>pply_remove_first |&gt; <span data-count="10">m</span>ake_biglist |&gt; <span data-count="10">L</span>ist.concat |&gt; <span data-count="10">A</span>rray.of_list
 
+  (* Loads image as 2D array *)
 let load_2d_array name_and_path =
-  <span data-count="26">s</span>trings_from_file name_and_path |&gt; <span data-count="25">S</span>tring.split_on_chars ~on:['\n']  |&gt; <span data-count="25">s</span>anitize_list |&gt; <span data-count="26">a</span>pply_remove_first |&gt; <span data-count="26">m</span>ake_biglist |&gt; <span data-count="26">m</span>ake_2d_array
+  <span data-count="29">s</span>trings_from_file name_and_path |&gt; <span data-count="28">S</span>tring.split_on_chars ~on:['\n']  |&gt; <span data-count="28">s</span>anitize_list |&gt; <span data-count="29">a</span>pply_remove_first |&gt; <span data-count="29">m</span>ake_biglist |&gt; <span data-count="29">m</span>ake_2d_array
 
 
 
