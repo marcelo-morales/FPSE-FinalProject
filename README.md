@@ -6,7 +6,9 @@ Numerade a web app that uses machine learning to recognize written numbers to co
 GitHub Repo URL: https://github.com/marcelo-morales/FPSE-FinalProject 
 
 
-Implemantaion Plan can be found in the following Kanban board: https://github.com/users/marcelo-morales/projects/3 
+Implementation Plan can be found in the following Kanban board: https://github.com/users/marcelo-morales/projects/3 
+
+
 
 ## Reponsibilities
 * All machine learning backend (Christian) (readfile.ml, operate.ml, train_conv.ml, predict_conv.ml, extradigt.ml, multiple_digits_tester.ml)
@@ -34,6 +36,8 @@ node -v
 ```
 
 ## Machine Learning Part
+For this part we took inspiration from the Ocaml-torch library for how the neural network was trained and handled
+
 To run the machine learning testsuite, you have to be in the most outer folder:
 
 ```
