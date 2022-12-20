@@ -10,8 +10,8 @@ depends: [
   "dune" {>= "3.4"}
   "ounit2" {> "2.0"}
   "core" {> "0.14.1"}
-  "ocaml-torch" {= "0.17"}
-  "dream" {= "1.0.0"}
+  "torch" {= "0.16"}
+  "dream" {= "1.0.0~alpha4"}
   "lwt" {= "5.6.1"}
   "odoc" {with-doc}
 ]
