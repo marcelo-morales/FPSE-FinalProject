@@ -1,6 +1,8 @@
 (lang dune 3.4)
 
   (generate_opam_files true)
+
+  (name numerade)
   (package
 
   (authors "Christian Raasteen" "Marcelo Morales")
