@@ -3,8 +3,9 @@
   (generate_opam_files true)
 
   (name numerade)
-  (allow_empty)
+  
   (package
+  (allow_empty)
 
   (authors "Christian Raasteen" "Marcelo Morales")
   (maintainers "marcelomv11@gmail.com" "christian.raasteen@outlook.com")
