@@ -3,6 +3,7 @@
   (generate_opam_files true)
 
   (name numerade)
+  (allow_empty)
   (package
 
   (authors "Christian Raasteen" "Marcelo Morales")
