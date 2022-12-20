@@ -15,6 +15,7 @@ let batch_size = 256 (* Increase this to get better accuracy *)
 let epochs = 200 (* Increase this to get better accuracy *)
 let learning_rate = 0.001 (* Lower this to get better accuracy - but not much - if you lower this then up the number of epochs*)
 
+
 let device = Device.cuda_if_available () 
 let mnist = Mnist_helper.read_files () 
 let vs = Var_store.create ~name:"cnn" ~device () 
