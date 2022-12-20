@@ -11,6 +11,6 @@
     (ounit2 (> 2.0)) ; for each opam dependency list the version
     (core (> 0.14.1)) ; `opam list core` will display which version of core you have
     (torch (= 0.17)) ;
-    (dream (= 1.0.0~alpha4)) ;
+    (dream (= 1.0.0)) ;
     (lwt (= 5.6.1)) ;
  ))
