@@ -58,8 +58,7 @@ let padimages (dim1 : int) (arraylist : float array array list)  =
     accum @ [zeromatrix]
   ) in
   padded_arraylist
-  
-(* hey *)
+
 
 (* This function recognizes multiple numbers drawn on an image and outputs the numbers as a string *)
 let recognize_multiple_digits (matrix : float array array ) (weights_name_and_path : string) =
